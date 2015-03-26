@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BranchburgDoctors::Application.config.secret_key_base = '03597b033c4510276a47b63205d4d518e74a9c86e025d5cc6abb69d0b7ae7f016b37d05fdb358cab7af83f7d7803cfee4dd2d8c8552856754ae46aa42418fb72'
+BranchburgDoctors::Application.config.secret_key_base = ENV['APP_SECRET_TOKEN']

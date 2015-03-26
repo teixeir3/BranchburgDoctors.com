@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @observance.start_date %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @observance.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @observance.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @observance.description %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @observance.photo_id %>
+</p>
+
+<%= link_to 'Edit', edit_observance_path(@observance) %> |
+<%= link_to 'Back', observances_path %>

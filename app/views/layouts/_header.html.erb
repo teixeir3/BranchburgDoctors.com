@@ -1,0 +1,52 @@
+<header class="header navbar-static-top">
+  <nav id="logo-nav" class="logo navbar navbar-default">
+    <div class="container">
+      <figure id="logo" class="logo">
+        <a href="<%= root_url %>">
+          <img class="site-logo" src="<%= image_url("sbfp_logo_no_url_300x235.png") %>" alt="South Branch Family Practice">
+        </a>
+        <figcaption id="site-slogan"><strong>South Branch Family Practice</strong>: Julie Ann Juliano, MD and Ruby Halper-Erkkila, MD.</figcaption>
+      </figure>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-brand-small" href="<%= root_url %>"><%= image_tag("sbfp_logo_no_url_90x90.png", alt: "South Branch Family Practice") %></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      
+      <div class="main-nav collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <a class="navbar-brand navbar-brand-big" href="<%= root_url %>"><%= image_tag("sbfp_logo_no_url_90x90.png", alt: "South Branch Family Practice") %></a>
+          <li><a href="<%= root_path %>">Home</a></li>  
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Patient Portal <span class="sr-only">(current)</span></a></li>
+          <li><a href="<%= "#" %>">Patient Education</a></li>
+          <li><a href="<%= "#" %>">Physicians</a></li>
+          <li><a href="<%= "#" %>">Services</a></li>
+          <li><a href="<%= "#" %>">Insurance Information</a></li>
+          <li><a href="<%= '#' %>">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu inverse-dropdown" role="menu">
+            <li><%= link_to "Sign In", new_session_url %></li>
+            <li class="divider"></li>
+            <li><a href="#">Demo (Coming Soon!)</a></li>
+          </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+</header>

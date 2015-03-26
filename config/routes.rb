@@ -1,4 +1,16 @@
 BranchburgDoctors::Application.routes.draw do
+  resource :session, only: [:create, :destroy, :new]
+  resources :users do
+    get :activate, on: :collection
+    get :password_reset, on: :collection
+    put :password_update, on: :collection
+    put :sort, on: :collection
+    resources :pictures
+  end
+  
+  resources :observances
+  root to: "observances#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

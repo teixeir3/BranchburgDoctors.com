@@ -1,0 +1,35 @@
+<h1>Monthly Oservances for <%= Date::MONTHNAMES[Date.today.month] %>:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start date</th>
+      <th>Name</th>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Photo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @observances.each do |observance| %>
+      <tr>
+        <td><%= observance.start_date %></td>
+        <td><%= observance.name %></td>
+        <td><%= observance.link %></td>
+        <td><%= observance.description %></td>
+        <td><%= observance.photo_id %></td>
+        <td><%= link_to 'Show', observance %></td>
+        <td><%= link_to 'Edit', edit_observance_path(observance) %></td>
+        <td><%= link_to 'Destroy', observance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Observance', new_observance_path if current_user_is_admin? %>
