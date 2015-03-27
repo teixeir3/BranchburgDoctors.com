@@ -4,7 +4,7 @@ $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 
 $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
-$navbar-height: 90px;
+$navbar-height: 74px;
 
 //$navbarText: #eee;
 $navbarLinkColor: #2a59c7;
@@ -66,6 +66,9 @@ $btn-primary-bg: #2a59c7;
  
 .right { float: right;}
 
+.navbar { border: none; }
+
+.row { padding-top: 30px; }
  
 .dropdown-submenu{position:relative;}
 .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
@@ -106,7 +109,7 @@ body {
 
 .navbar-brand > img {
   position: relative;
-  top: -1px;
+  top: 0px;
   left: 0px;
   background: white;
 }
@@ -190,10 +193,10 @@ footer {
 // medium +
 @media (min-width: 768px) {
   
-  .navbar-nav > li > a {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
+  //.navbar-nav > li > a {
+//    padding-top: 30px;
+//    padding-bottom: 30px;
+//  }
   
   // Open on hover when medium +
   .dropdown-menu li:hover .sub-menu { visibility: visible; }
@@ -235,8 +238,8 @@ footer {
 @media (min-width: 992px) {
   
   .navbar-nav > li > a {
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
   
 	.sampleClass {float:none;}
@@ -314,8 +317,12 @@ header {
 //  transition:all 1s ease-in;
 //}
 
+.collapsed main {
+  padding-top: 354px;
+}
+
 .collapsed .header {
-  top: -87px;
+  top: -263px;
 }
 
 .collapsed .navbar-brand-big {

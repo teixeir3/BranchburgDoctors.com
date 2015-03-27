@@ -108,9 +108,11 @@ var rowFadeout = function() {
   
 var collapseCheck = function() {
   if (scrollCheck(265)) {
-    addClasses({'body': 'collapsed'});
+    addClasses({'body': 'collapsed', 'header': 'navbar-fixed-top'});
+    removeClasses({'header': 'navbar-static-top'});
   } else {
-    removeClasses({'body': 'collapsed'});
+    removeClasses({'body': 'collapsed', 'header': 'navbar-fixed-top'});
+    addClasses({'header': 'navbar-static-top'});
   }
 };
 
