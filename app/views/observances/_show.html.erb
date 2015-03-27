@@ -1,0 +1,10 @@
+<tr>
+  <td><%= observance.start_date %></td>
+  <td><%= observance.name %></td>
+  <td><%= observance.link %></td>
+  <td><%= observance.description %></td>
+  <td><%= observance.photo_id %></td>
+  <td><%= link_to 'Show', observance %></td>
+  <td><%= link_to 'Edit', edit_observance_path(observance) %></td>
+  <td><%= link_to 'Destroy', observance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

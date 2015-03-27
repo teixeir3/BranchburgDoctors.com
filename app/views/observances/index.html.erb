@@ -1,34 +1,9 @@
+
+branchburgdoctors.com is currently undergoing maintenance. Please check back in a few hours.
+
+<%= link_to "Click here for South Branch Family Practice Patient Portal", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx" %>
+
 <h1>Monthly Oservances for <%= Date::MONTHNAMES[Date.today.month] %>:</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Start date</th>
-      <th>Name</th>
-      <th>Link</th>
-      <th>Description</th>
-      <th>Photo</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @observances.each do |observance| %>
-      <tr>
-        <td><%= observance.start_date %></td>
-        <td><%= observance.name %></td>
-        <td><%= observance.link %></td>
-        <td><%= observance.description %></td>
-        <td><%= observance.photo_id %></td>
-        <td><%= link_to 'Show', observance %></td>
-        <td><%= link_to 'Edit', edit_observance_path(observance) %></td>
-        <td><%= link_to 'Destroy', observance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
