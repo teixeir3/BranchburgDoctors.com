@@ -163,12 +163,12 @@ footer {
 @media (max-width: 768px) {
   
   .collapsed .navbar-brand-small {
-    left: 0px;
+    left: -200px;
   }
   //  visible when small
   .navbar-brand-small {
     top: 0px;
-    left: -90px;
+    left: -600px;
     position: relative;
     transition:all 1700ms;
     -webkit-transition:all 1700ms;
@@ -326,11 +326,13 @@ header {
 }
 
 .collapsed .navbar-brand-big {
-  top: 0px;
+//  top: 0px;
+  left: 0px;
 }
 
 .navbar-brand-big {
-  top: -650px;
+//  top: -650px;
+  left: -600px;
 }
 
 //.collapsed .navbar-brand {

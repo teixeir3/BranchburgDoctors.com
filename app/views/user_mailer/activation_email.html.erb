@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to BranchburgDoctors.com, <%= @user.email %>, </h1>
+    <p>
+      Your sign up to BranchburgDoctors.com was successful!
+    </p>
+    
+    <p>
+      Please activate your account by visiting this link:
+      <%= link_to("Activate", @url) %>
+    </p>
+
+    <p>
+      If you can't click the link, copy and paste this URL into your browser:
+      <br>
+      <%= @url %>
+    </p>
+
+    <p>
+      Thanks for joining and have a great day!
+    </p>
+  </body>
+</html>
