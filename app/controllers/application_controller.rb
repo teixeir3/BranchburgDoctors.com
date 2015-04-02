@@ -16,7 +16,6 @@ class ApplicationController < ActionController::Base
   
   def set_observances_current_month
     @observances = Observance.current_month_display
-    fail
   end
   
   def set_facebook_feed
