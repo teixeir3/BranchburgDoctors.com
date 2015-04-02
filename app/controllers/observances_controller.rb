@@ -1,5 +1,10 @@
 class ObservancesController < ApplicationController
   before_action :set_observance, only: [:show, :edit, :update, :destroy]
+  before_action :set_observances, :set_downloads, only: [:home]
+
+  def home
+    render "pages/home"
+  end
 
   # GET /observances
   # GET /observances.json

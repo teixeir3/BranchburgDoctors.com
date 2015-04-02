@@ -1,4 +1,8 @@
 BranchburgDoctors::Application.routes.draw do
+  resources :pictures
+
+  resources :downloads
+
   resource :session, only: [:create, :destroy, :new]
   resources :users do
     get :activate, on: :collection
@@ -10,6 +14,11 @@ BranchburgDoctors::Application.routes.draw do
   
   resources :downloads, only: [:index]
   resources :observances
+  
+  get "/pages/*id" => 'pages#show', as: :page, format: false
+
+  root to: 'observances#home', id: 'home'
+  
   # root to: "observances#index"
   # root to: "pages#home", as: "home"
 

@@ -88,6 +88,7 @@ class User < ActiveRecord::Base
   
   has_many :bookings, through: :booking_categories, source: :bookings
   
+  include Imageable
   
   ### Mailer Methods ###
   

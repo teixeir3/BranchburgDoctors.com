@@ -5,12 +5,13 @@ $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
 $navbar-height: 74px;
-
+$navbar-inverse-color: #352f9b;
+$navbar-inverse-link-color: #337ab7;
 //$navbarText: #eee;
 $navbarLinkColor: #2a59c7;
 
 $btn-primary-bg: #2a59c7;
-
+$downloadsBackground: #2d835d;
 
 
 
@@ -63,12 +64,57 @@ $btn-primary-bg: #2a59c7;
 //    top: 11px;
 //    left: -6px;
 //}
- 
+
+
+
+
+// ############## Home page columns ###########
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding: 20px 15px 20px 15px;
+}
+
+.col-md-12 > .col-md-12 {
+  padding: 30px;
+}
+
+
+.row > h1 {
+  padding-left: 30px;
+}
+.downloads {
+  background-color: $downloadsBackground;// url() top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
 .right { float: right;}
 
 .navbar { border: none; }
 
-.row { padding-top: 30px; }
+.collpased > .navbar-nav {
+  padding-left: 40px;
+}
+.background-image {
+  background-size: cover;
+  display: block;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  height: 800px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
+}
+
+.row { 
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+}
  
 .dropdown-submenu{position:relative;}
 .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
@@ -100,17 +146,22 @@ body {
 //  padding-top: 380px; for header fixed-top 
   overflow-x: hidden;
   transition:all 1s;
+  
   -webkit-transition:all 1s;
   -moz-transition:all 1s;
   -o-transition:all 1s;
 }
 
+#site-slogan {
+  min-width: 236px;
+}
 //@import "bootstrap-responsive";
 
-.navbar-brand > img {
+.navbar-brand {
   position: relative;
   top: 0px;
   left: 0px;
+  padding: 0px;
   background: white;
 }
 
@@ -162,13 +213,19 @@ footer {
 // Small
 @media (max-width: 768px) {
   
-  .collapsed .navbar-brand-small {
-    left: -200px;
+  .container {
+    width: 100%;
   }
-  //  visible when small
+  
+  //  visible when small viewport and collapsed (scroll level=265px)
+  .collapsed .navbar-brand-small {
+    left: 0px;
+    top: -27px;
+  }
+  
   .navbar-brand-small {
-    top: 0px;
-    left: -600px;
+
+    left: -200px;
     position: relative;
     transition:all 1700ms;
     -webkit-transition:all 1700ms;
@@ -192,6 +249,10 @@ footer {
 
 // medium +
 @media (min-width: 768px) {
+  
+  .container {
+    width: 100%;
+  }
   
   //.navbar-nav > li > a {
 //    padding-top: 30px;
@@ -236,6 +297,10 @@ footer {
 
 // large
 @media (min-width: 992px) {
+  
+  .container {
+    width: 100%;
+  }
   
   .navbar-nav > li > a {
     padding-top: 26px;
@@ -332,7 +397,7 @@ header {
 
 .navbar-brand-big {
 //  top: -650px;
-  left: -600px;
+  left: -200px;
 }
 
 //.collapsed .navbar-brand {

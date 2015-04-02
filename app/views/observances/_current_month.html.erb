@@ -1,12 +1,13 @@
+
 <div class="col-md-6">
 <h1>Observances for <%= Date::MONTHNAMES[Date.today.month] %>:</h1>
 
  
-<% # @observances.each do |observance| %>
+<% observances.each do |observance| %>
 
-  <% # render "observances/show", observance: @observance %>
+  <%= render "observances/show", observance: observance %>
 
-<% # end %>
+<% end %>
 
 </div>
 

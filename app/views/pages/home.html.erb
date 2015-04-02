@@ -1,20 +1,23 @@
 <%= content_for :page_title, 'SBFP Home' %>
 
 <div class="row">
-  <div class="col-md-12">
-
-    branchburgdoctors.com is currently undergoing maintenance. Please check back in a few hours.
-
-    <%= link_to "Click here for South Branch Family Practice Patient Portal", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx" %>
-    
-  </div>
+  <%= render "pages/maintenance" %>
 </div>
+
 
 <div class="row">
-  <%= render "observances/current_month" %>
+  <%= render "observances/current_month", observances: @observances %>
 </div>
 
-<div class="row">
-  <%= render "pages/downloads" %>
+<div class="row downloads">
+  <h1>New Patients Welcome:</h1>
+  <%= render "downloads/index", downloads: @downloads %>
 </div>
+
+
+
+<div class="row">
+  <%= render "pages/patient_portal" %>
+</div>
+
 

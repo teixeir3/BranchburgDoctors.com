@@ -2,9 +2,22 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   # before_action :set_testimonials, :set_facebook_feed
   
-  helper_method :current_user, :current_user_is_admin? ,:permitted_params, :signed_in?
+  helper_method :current_user, :current_user_is_admin? ,:permitted_params, :signed_in?, :set_observances
 
   private
+  
+  def set_downloads
+    @downloads = Download.all_display
+  end
+  
+  def set_observances
+    @observances = Observance.all_display
+  end
+  
+  def set_observances_current_month
+    @observances = Observance.current_month_display
+    fail
+  end
   
   def set_facebook_feed
     user = User.find_by_credentials(ENV["DEV_EMAIL"], ENV["DEV_PASSWORD"])

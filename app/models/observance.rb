@@ -15,4 +15,10 @@
 #
 
 class Observance < ActiveRecord::Base
+  
+  validates :start_date, :name, :link, presence: true
+  
+  def self.current_month_display
+      self.all_display.select { |x| x.start_date.month == Date.today.month }
+  end
 end

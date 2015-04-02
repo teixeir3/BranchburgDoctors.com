@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326175721) do
+ActiveRecord::Schema.define(version: 20150401200322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "downloads", force: true do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.boolean  "display",    default: true, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "downloads", ["display"], name: "index_downloads_on_display", using: :btree
 
   create_table "observances", force: true do |t|
     t.date     "start_date"
@@ -30,6 +40,23 @@ ActiveRecord::Schema.define(version: 20150326175721) do
 
   add_index "observances", ["display"], name: "index_observances_on_display", using: :btree
   add_index "observances", ["photo_id"], name: "index_observances_on_photo_id", using: :btree
+
+  create_table "pictures", force: true do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.boolean  "display",            default: true, null: false
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "pictures", ["imageable_id", "imageable_type"], name: "index_pictures_on_imageable_id_and_imageable_type", using: :btree
+  add_index "pictures", ["imageable_type"], name: "index_pictures_on_imageable_type", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                                                         null: false
@@ -55,7 +82,7 @@ ActiveRecord::Schema.define(version: 20150326175721) do
     t.text     "bio"
     t.string   "phone"
     t.string   "work_phone"
-    t.string   "home_phonew"
+    t.string   "home_phone"
     t.string   "mobile_phone"
     t.string   "fax"
     t.string   "timezone",               default: "Eastern Time (US & Canada)", null: false
