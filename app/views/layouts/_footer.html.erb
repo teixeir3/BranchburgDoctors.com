@@ -1,22 +1,41 @@
 <footer>
   <nav class="footer navbar navbar-inverse">
-    <div id="footer-container" class="container">  
-      <div class="copyright left">
-      	<a href="http://www.AyosInformatics.com/"><img src="/assets/ayos_final_100x50_5.png" alt="Ayos Informatics"></a>
-        <small>© Ayos Informatics, LLC 2014</small>
+    <div id="footer-container" class="container">
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="copyright">
+          	<a href="http://www.AyosInformatics.com/"><img src="/assets/ayos_final_100x50_5.png" alt="Ayos Informatics"><p><small>© Ayos Informatics, LLC 2014</small></p></a>
+            
+          </div>
+        </div>
+      
+        <div class="col-md-6">
+          <address class="address">
+            <strong>South Branch Family Practice</strong><br>
+            48 Robbins Road<br>
+            (right off of RT 202/31 South)<br>
+            Branchburg, NJ 08876<br>
+            <div title="Phone">Dr. Julie: (908) 685 - 8080</div>
+            <div title="Phone">Dr. Ruby: (908) 526 - 8300</div>
+          </address>
+          <!-- <a class="address" href="<%= page_path("directions") %>">
+            <ul>
+              <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
+                <li><%= ENV["ADDRESS_#{i}"] %></li>
+              <% end %>
+            </ul>
+          </a> -->
+        </div>
       </div>
       
-      <%= render "layouts/social_links", css_classes: "right" %>
+      <div class="row">
+        <div class="col-md-12">
+            <%= render "layouts/social_links", css_classes: "" %>
+          </div>
+        </div>
   
-      <div class="right">
-        <a class="address" href="<%= page_path("directions") %>">
-        	<ul>
-            <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
-              <li><%= ENV["ADDRESS_#{i}"] %></li>
-            <% end %>
-          </ul>
-        </a>
-      </div>
+      
   
       <div class="params group">
         <%  if Rails.env.development? %>

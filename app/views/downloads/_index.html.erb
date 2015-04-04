@@ -1,6 +1,6 @@
 <div class="col-md-<%= "#{downloads.count}" %>">
   <ul>
-   
+   <li><%= link_to 'New Download', new_download_path if current_user_is_admin? %></li>
     <% downloads.each do |download| %>
       <li>Print and fill out your Demographics Info sheet before your visit.</li>
       <li>Download New Patient Welcome Packet for more information.</li>

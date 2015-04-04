@@ -1,23 +1,30 @@
 <%= content_for :page_title, 'SBFP Home' %>
 
-<div class="row">
+<div class="row row-padding text-center">
+  <div class="col-md-12 welcome">
+      <h1>Welcome to South Branch Family Practice</h1>
+      <p class="">Julie Ann Juliano, MD | Ruby Halper-Erkkila, MD</p>
+  </div>
+</div>
+
+<div class="row row-padding text-center">
   <%= render "pages/maintenance" %>
 </div>
 
-
-<div class="row">
+<div class="row row-padding observances">
   <%= render "observances/current_month", observances: @observances %>
 </div>
 
-<div class="row downloads">
+<div class="row row-padding">
+  <%= render "pages/patient_portal" %>
+</div>
+
+<div class="row row-padding downloads">
   <h1>New Patients Welcome:</h1>
   <%= render "downloads/index", downloads: @downloads %>
 </div>
 
 
 
-<div class="row">
-  <%= render "pages/patient_portal" %>
-</div>
 
 

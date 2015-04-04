@@ -12,6 +12,7 @@ $navbarLinkColor: #2a59c7;
 
 $btn-primary-bg: #2a59c7;
 $downloadsBackground: #2d835d;
+$observancesBackground: #6c2a48;
 
 
 
@@ -91,6 +92,13 @@ $downloadsBackground: #2d835d;
   min-height: 400px;
 }
 
+.observances {
+  background-color: $observancesBackground;// url() top center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+}
+
 .right { float: right;}
 
 .navbar { border: none; }
@@ -110,10 +118,10 @@ $downloadsBackground: #2d835d;
   z-index: 1;
 }
 
-.row { 
+.row-padding { 
   padding-top: 30px;
   padding-bottom: 60px;
-
+  min-height: 300px;
 }
  
 .dropdown-submenu{position:relative;}
@@ -141,7 +149,18 @@ $downloadsBackground: #2d835d;
 
 // TEST TEST TEST END END END END END END TEST TEST TEST
  
- 
+.address {
+  color: black;
+}
+
+.maintenance {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 body {
 //  padding-top: 380px; for header fixed-top 
   overflow-x: hidden;
@@ -250,9 +269,9 @@ footer {
 // medium +
 @media (min-width: 768px) {
   
-  .container {
-    width: 100%;
-  }
+  //.container {
+//    width: 100%;
+//  }
   
   //.navbar-nav > li > a {
 //    padding-top: 30px;
@@ -297,7 +316,9 @@ footer {
 
 // large
 @media (min-width: 992px) {
-  
+  .address {
+    float: right;
+  }
   .container {
     width: 100%;
   }

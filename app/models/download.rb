@@ -12,6 +12,8 @@
 
 class Download < ActiveRecord::Base
   
+  validates :title, presence: true
+  
   belongs_to(
     :user,
     class_name: "User",
