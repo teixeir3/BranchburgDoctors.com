@@ -1,20 +1,22 @@
 class DownloadsController < ApplicationController
-  # before_action :set_download, only: [:show, :edit, :update, :destroy]
+  before_action :set_download, only: [:show, :edit, :update, :destroy]
   before_action :set_downloads, only: [:index]
   
   # GET /downloads
   # GET /downloads.json
 
   def index
-    if params[:filename]
-      send_file "app/assets/images/#{params[:filename]}",
-                filename: params[:filename],
-                type: params[:filename][/\.[^.]*$/],
-                disposition: 'attachment',
-                x_sendfile: true 
-    else
-      render nothing: true, status: 400
-    end
+    # if params[:filename]
+ #      send_file "app/assets/images/#{params[:filename]}",
+ #                filename: params[:filename],
+ #                type: params[:filename][/\.[^.]*$/],
+ #                disposition: 'attachment',
+ #                x_sendfile: true
+ #    else
+ #      flash.now[:errors] = ["No filename submitted."]
+ #      render nothing: true, status: 400
+ #    end
+ 
   end
 
 
@@ -27,7 +29,7 @@ class DownloadsController < ApplicationController
 
   # GET /downloads/new
   def new
-    @download = Download.new
+    @download = current_user.downloads.build(permitted_params.download)
   end
 
   # GET /downloads/1/edit
@@ -37,7 +39,7 @@ class DownloadsController < ApplicationController
   # POST /downloads
   # POST /downloads.json
   def create
-    @download = Download.new(download_params)
+    @download = current_user.downloads.build(permitted_params.download)
 
     respond_to do |format|
       if @download.save
@@ -54,7 +56,7 @@ class DownloadsController < ApplicationController
   # PATCH/PUT /downloads/1.json
   def update
     respond_to do |format|
-      if @download.update(download_params)
+      if @download.update(permitted_params.download)
         format.html { redirect_to @download, notice: 'Download was successfully updated.' }
         format.json { head :no_content }
       else
@@ -76,12 +78,8 @@ class DownloadsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_download
-      @download = Download.find(params[:id])
-    end
+  def set_download
+    @download = Download.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def download_params
-      params[:download]
-    end
 end

@@ -13,7 +13,7 @@ $navbarLinkColor: #2a59c7;
 $btn-primary-bg: #2a59c7;
 $downloadsBackground: #2d835d;
 $observancesBackground: #6c2a48;
-
+$observancesTextColor: white;
 
 
 @import "bootstrap-sprockets";
@@ -94,6 +94,7 @@ $observancesBackground: #6c2a48;
 
 .observances {
   background-color: $observancesBackground;// url() top center no-repeat;
+  color: $observancesTextColor;
   background-size: cover;
   background-attachment: fixed;
   min-height: 400px;
@@ -119,8 +120,7 @@ $observancesBackground: #6c2a48;
 }
 
 .row-padding { 
-  padding-top: 30px;
-  padding-bottom: 60px;
+  padding: 30px 30px 60px 30px;
   min-height: 300px;
 }
  
@@ -159,6 +159,10 @@ $observancesBackground: #6c2a48;
 
 .text-center {
   text-align: center;
+}
+
+.main-content {
+  padding-bottom: 0px;
 }
 
 body {
@@ -207,11 +211,12 @@ a { text-decoration: none; }
 ul, li { list-style-type: none; }
 
 footer {
-  padding: 20px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 #footer-container {
   width: auto;
+  padding: 30px;
 }
 
 #logo-nav {
@@ -228,6 +233,12 @@ footer {
   -webkit-transition:all 1s ease-in;
   transition:all 1s ease-in;
 }
+
+//.collapsed { padding-top: 60px; }
+body { 
+  padding-top: 0px;
+}
+  
 
 // Small
 @media (max-width: 768px) {
@@ -408,7 +419,7 @@ header {
 }
 
 .collapsed .header {
-  top: -263px;
+  top: -266px;
 }
 
 .collapsed .navbar-brand-big {

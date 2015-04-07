@@ -1,4 +1,4 @@
-<%= form_for(@observance) do |f| %>
+<%= simple_form_for(@observance) do |f| %>
   <% if @observance.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@observance.errors.count, "error") %> prohibited this observance from being saved:</h2>
@@ -32,6 +32,6 @@
     <%= f.number_field :photo_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit @observance.button_text, class: "btn btn-primary" %>
   </div>
 <% end %>

@@ -8,11 +8,12 @@
 #  display    :boolean          default(TRUE), not null
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer          not null
 #
 
 class Download < ActiveRecord::Base
   
-  validates :title, presence: true
+  validates :title, :user, presence: true
   
   belongs_to(
     :user,

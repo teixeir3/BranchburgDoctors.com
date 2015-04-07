@@ -26,7 +26,7 @@
 #  bio                    :text
 #  phone                  :string(255)
 #  work_phone             :string(255)
-#  home_phonew            :string(255)
+#  home_phone             :string(255)
 #  mobile_phone           :string(255)
 #  fax                    :string(255)
 #  timezone               :string(255)      default("Eastern Time (US & Canada)"), not null

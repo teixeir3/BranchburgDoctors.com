@@ -1,7 +1,9 @@
-<div class="col-md-<%= "#{downloads.count}" %>">
+<h1>Patient Resources: </h1> <%= link_to 'New Download', new_download_path, class: "right" if current_user_is_admin? %>
+<div class="col-md-<%= "#{12/downloads.count}" %>">
   <ul>
-   <li><%= link_to 'New Download', new_download_path if current_user_is_admin? %></li>
     <% downloads.each do |download| %>
+      <li><%= download.title %></li>
+      <li>New Patients Welcome!</li>
       <li>Print and fill out your Demographics Info sheet before your visit.</li>
       <li>Download New Patient Welcome Packet for more information.</li>
       <li>To understand our Referral policy, click here.</li>

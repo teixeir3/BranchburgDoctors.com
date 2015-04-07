@@ -1,26 +1,23 @@
-<%- model_class = Download -%>
+<div class="row row-padding">
+  <%- model_class = Download -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:position) %></th>
       <th><%= model_class.human_attribute_name(:display) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @downloads.each do |download| %>
       <tr>
-        <td><%= link_to download.id, download_path(download) %></td>
-        <td><%= download.title %></td>
+        <td><%= link_to download.title, download_path(download) %></td>
         <td><%= download.position %></td>
         <td><%= download.display %></td>
-        <td><%=l download.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_download_path(download), :class => 'btn btn-mini' %>

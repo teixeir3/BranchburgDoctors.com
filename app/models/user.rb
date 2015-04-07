@@ -26,7 +26,7 @@
 #  bio                    :text
 #  phone                  :string(255)
 #  work_phone             :string(255)
-#  home_phonew            :string(255)
+#  home_phone             :string(255)
 #  mobile_phone           :string(255)
 #  fax                    :string(255)
 #  timezone               :string(255)      default("Eastern Time (US & Canada)"), not null
@@ -62,6 +62,16 @@ class User < ActiveRecord::Base
   before_validation :set_temporary_password, on: :create
   before_create :set_activation_token
   
+ # Current Associations
+ has_many(
+   :downloads,
+   class_name: "Download",
+   foreign_key: :user_id,
+   primary_key: :id,
+   inverse_of: :user
+ )
+ 
+ # TODO Potential
   has_many(
     :promotions,
     class_name: "Promotion",

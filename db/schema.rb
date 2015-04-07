@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150401200322) do
+ActiveRecord::Schema.define(version: 20150406200548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,11 @@ ActiveRecord::Schema.define(version: 20150401200322) do
     t.boolean  "display",    default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id",                   null: false
   end
 
   add_index "downloads", ["display"], name: "index_downloads_on_display", using: :btree
+  add_index "downloads", ["user_id"], name: "index_downloads_on_user_id", using: :btree
 
   create_table "observances", force: true do |t|
     t.date     "start_date"

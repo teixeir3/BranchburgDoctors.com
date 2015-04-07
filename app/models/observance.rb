@@ -16,7 +16,19 @@
 
 class Observance < ActiveRecord::Base
   
-  validates :start_date, :name, :link, presence: true
+  validates :start_date, :name, :link, :user, presence: true
+  
+ 
+  
+  belongs_to(
+    :user,
+    class_name: "User",
+    foreign_key: :user_id,
+    primary_key: :id,
+    inverse_of: :downloads
+  )
+  
+  include Imageable
   
   def self.current_month_display
       self.all_display.select { |x| x.start_date.month == Date.today.month }

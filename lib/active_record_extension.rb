@@ -12,7 +12,7 @@ module ActiveRecordExtension
   end
   
   def button_text
-    (persisted?) ? "Create" : "Update"
+    (persisted?) ? "Update" : "Create"
   end
   
   module ClassMethods
