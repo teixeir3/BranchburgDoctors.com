@@ -1,5 +1,5 @@
 <h1>Patient Resources: </h1> <%= link_to 'New Download', new_download_path, class: "right" if current_user_is_admin? %>
-<div class="col-md-<%= "#{12/downloads.count}" %>">
+<div class="col-md-<%= (downloads.empty?) ? "12" : "#{12/downloads.count}" %>">
   <ul>
     <% downloads.each do |download| %>
       <li><%= download.title %></li>

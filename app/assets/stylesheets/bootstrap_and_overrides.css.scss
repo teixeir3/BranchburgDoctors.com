@@ -99,7 +99,9 @@ $observancesTextColor: white;
   background-attachment: fixed;
   min-height: 400px;
 }
-
+.bio > p {
+  text-indent: 20px;
+}
 .right { float: right;}
 
 .navbar { border: none; }
