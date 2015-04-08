@@ -5,22 +5,23 @@
       <h1>Welcome to South Branch Family Practice</h1>
       <p class="">Julie Ann Juliano, MD | Ruby Halper-Erkkila, MD</p>
   </div>
-</div>
-
-<div class="row row-padding text-center">
   <%= render "pages/maintenance" %>
 </div>
 
-<div class="row row-padding observances">
+
+<div class="row row-padding observances tint">
+  <div class="background-blur"></div>
   <%= render "observances/current_month", observances: @observances %>
 </div>
 
-<div class="row row-padding">
+<div class="row row-padding patient_portal">
   <%= render "pages/patient_portal" %>
 </div>
 
-<div class="row row-padding downloads">
-  <%= render "downloads/index", downloads: @downloads %>
+<div class="row row-padding downloads tint">
+  <div class="col-md-12">
+    <%= render "downloads/index", downloads: @downloads %>
+  </div>
 </div>
 
 <div class="row row-padding doctors">
