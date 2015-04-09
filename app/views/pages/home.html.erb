@@ -8,20 +8,21 @@
   <%= render "pages/maintenance" %>
 </div>
 
-
-<div class="row row-padding observances tint">
-  <div class="background-blur"></div>
-  <%= render "observances/current_month", observances: @observances %>
+<div class="row row-padding downloads tint background-image">
+  <div class="col-md-12">
+    <%= render "downloads/index", downloads: @downloads %>
+  </div>
 </div>
+
 
 <div class="row row-padding patient_portal">
   <%= render "pages/patient_portal" %>
 </div>
 
-<div class="row row-padding downloads tint">
-  <div class="col-md-12">
-    <%= render "downloads/index", downloads: @downloads %>
-  </div>
+
+<div class="row row-padding observances tint background-image">
+  <div class="background-blur"></div>
+  <%= render "observances/current_month", observances: @observances %>
 </div>
 
 <div class="row row-padding doctors">

@@ -12,9 +12,12 @@ $navbarLinkColor: #2a59c7;
 
 $btn-primary-bg: #2a59c7;
 $downloadsBackground: #2d835d;
+$downloadsTextColor: white;
 $observancesBackground: #6c2a48;
 $observancesTextColor: black;
 $observancesLinkColor: #2a59c7;
+
+$navbar-default-link-color: yellow;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -116,7 +119,8 @@ $observancesLinkColor: #2a59c7;
 
 .downloads {
   background-color: $downloadsBackground;// url() top center no-repeat;
-  background-image: url("OfficePictures/Office_Patient_Entrance.JPG");
+  color: $downloadsTextColor;
+  background-image: url("OfficePictures/Office_front_cropped_blur_2067x1258.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -125,7 +129,7 @@ $observancesLinkColor: #2a59c7;
 .observances:before { background: $observancesBackground; }
 .observances {
   background-color: $observancesBackground;// url("OfficePictures/Patient_room_from_door_wide.JPG") top center no-repeat;
-  background-image: url("OfficePictures/Patient_room_from_door_wide.JPG");
+  background-image: url("OfficePictures/Patient_room_from_door_wide_blur_2896x1944.png");
   color: $observancesTextColor;
   background-size: cover;
   background-attachment: fixed;
@@ -137,7 +141,6 @@ $observancesLinkColor: #2a59c7;
   }
   .observance {
     text-align: center;
-    background: white;
     color: black;
     display: block;
 //    width: auto;
@@ -145,11 +148,11 @@ $observancesLinkColor: #2a59c7;
     border-radius: 4px;
   }
 }
-
-.background-blur {
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-}
+//
+//.background-blur {
+//  filter: blur(5px);
+//  -webkit-filter: blur(5px);
+//}
 .bio > p {
   text-indent: 20px;
 }
@@ -167,14 +170,11 @@ $observancesLinkColor: #2a59c7;
 }
 .background-image {
   background-size: cover;
-  display: block;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  height: 800px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 1;
+  font-weight: bold;
+  h1, h2, h3 {
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+  }
 }
 
 .row-padding { 
@@ -297,7 +297,10 @@ footer {
 body { 
   padding-top: 0px;
 }
-  
+.navbar-nav > li > a {
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
 
 // Small
 @media (max-width: 768px) {
@@ -393,11 +396,6 @@ body {
     width: 100%;
   }
   
-  .navbar-nav > li > a {
-    padding-top: 26px;
-    padding-bottom: 26px;
-  }
-  
 	.sampleClass {float:none;}
   
   .main-content {
@@ -445,6 +443,10 @@ body {
   left: 0px;
 }
 
+.collapsed .nav-container {
+  box-shadow: rgba(0, 0, 0, 0.2) 3px 5px 5px;
+}
+
 .container {
 //  overflow: hidden;
 }
@@ -479,6 +481,7 @@ header {
 
 .collapsed .header {
   top: -266px;
+  height: 340px;
 }
 
 .collapsed .navbar-brand-big {
