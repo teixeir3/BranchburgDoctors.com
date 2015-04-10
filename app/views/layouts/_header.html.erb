@@ -32,17 +32,40 @@
         
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#">Patient Portal <span class="sr-only">(current)</span></a></li>
-          <li><a href="<%= "#" %>">Patient Education</a></li>
+          <li><a href="<%= "#" %>">Patient Resources</a></li>
           <li><a href="<%= "#" %>">Physicians</a></li>
-          <li><a href="<%= "#" %>">Services</a></li>
-          <li><a href="<%= "#" %>">Insurance Information</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+            <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
+              <li><%= link_to "Preventive Medicine", page_path("preventive_medicine") %></li>
+              <li><%= link_to "Surgery", page_path("surgery") %></li>
+              <li><%= link_to "Blood Draw", page_path("blood_draw") %></li>
+              <li><%= link_to "Vaccinations", page_path("vaccinations") %></li>
+              <li><%= link_to "Physicals", page_path("physicals") %></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Insurance <span class="caret"></span></a>
+            <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
+              <li><%= link_to "Medicare", page_path("medicare") %></li>
+              <li><%= link_to "Billing", page_path("billing") %></li>
+              <li><%= link_to "Referrals", page_path("referrals") %></li>
+            </ul>
+          </li>
           <li><a href="<%= '#' %>">Contact</a></li>
           <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
-          <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
-            <li><%= link_to "Sign In", new_session_url %></li>
-          </ul>
-        </li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Admin <span class="caret"></span>
+            </a>
+            <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
+              <% if signed_in? %>
+                <li><%= link_to_destroy "Sign Out", session_url, root_url %></li>
+              <% else %>
+                <li><%= link_to "Sign In", new_session_url %></li>
+              <% end %>
+              
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
