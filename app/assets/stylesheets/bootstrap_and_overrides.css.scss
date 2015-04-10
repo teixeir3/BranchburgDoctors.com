@@ -2,22 +2,25 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 
+
+// BS Variables
 $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
 $navbar-height: 74px;
-$navbarInverseColor: #352f9b;
-$navbar-inverse-link-color: #337ab7;
-//$navbarText: #eee;
-$navbarLinkColor: #2a59c7;
 
-$btn-primary-bg: #2a59c7;
+$navbar-inverse-bg: darken(#222, 15%);
+$navbar-inverse-color: white;
+$navbar-inverse-link-color: #337ab7;
+$gray-light: #337ab7;
+$brand-primary: #2a59c7;
+
+// Variables
 $downloadsBackground: #2d835d;
 $downloadsTextColor: white;
 $observancesBackground: #6c2a48;
 $observancesTextColor: black;
 $observancesLinkColor: #2a59c7;
 
-$navbar-default-link-color: yellow;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -132,7 +135,7 @@ $navbar-default-link-color: yellow;
 }
 
 .patient_portal {
-  background-image: url("OfficePictures/patient_portal_home_1400x863_blur.png");
+  background-image: url("OfficePictures/patient_portal_home_1400x863_blur_tinted_bfbed4.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -145,6 +148,10 @@ $navbar-default-link-color: yellow;
   background-attachment: fixed;
 }
 .download:before { background: $downloadsBackground; }
+
+.observance-form {
+  margin: auto;
+}
 
 .observances:before { background: $observancesBackground; }
 .observances {
@@ -198,7 +205,7 @@ $navbar-default-link-color: yellow;
 .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
 .inverse-dropdown{
-  background-color: #222;
+  background-color: $navbar-inverse-bg;
   border-color: #080808;
   & > li > a {
     color: #999;
@@ -214,10 +221,9 @@ $navbar-default-link-color: yellow;
 }
 
 
-// TEST TEST TEST END END END END END END TEST TEST TEST
  
 .address {
-  color: black;
+//  color: black;
 }
 
 .maintenance {

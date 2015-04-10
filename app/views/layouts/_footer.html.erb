@@ -11,14 +11,7 @@
         </div>
       
         <div class="col-md-6">
-          <address class="address">
-            <strong>South Branch Family Practice</strong><br>
-            48 Robbins Road<br>
-            (right off of RT 202/31 South)<br>
-            Branchburg, NJ 08876<br>
-            <div title="Phone">Dr. Julie: (908) 685 - 8080</div>
-            <div title="Phone">Dr. Ruby: (908) 526 - 8300</div>
-          </address>
+          <%= render "pages/address" %>
           <!-- <a class="address" href="<%= page_path("directions") %>">
             <ul>
               <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
