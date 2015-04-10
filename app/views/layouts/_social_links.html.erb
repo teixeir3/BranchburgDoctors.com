@@ -1,2 +1,19 @@
- <div class="<%= css_classes %>"><%= link_to "Facebook", "https://www.facebook.com/pages/South-Branch-Family-Practice/110660835662618", target: "_blank" %> | <%= link_to "LinkedIn", "https://www.linkedin.com/company/south-branch-family-practice?report.success=se2U8YjzSfSLqmrvJWfkzmUYKl6uKkphatxlAbbto9OkvCyhhsMCP1nNWIEQv6pq2D50iVxJ", target: "_blank" %> |
- <%= link_to "Google+", "https://plus.google.com/117788598261563774219/about?gl=US&hl=en-US", target: "_blank" %></div>
+<ul class="<%= css_classes %>">>
+  <li>
+    <%= link_to "https://www.facebook.com/pages/South-Branch-Family-Practice/110660835662618", target: "_blank", alt: "Facebook", class: "facebook-link" do %>
+      <%= image_tag "icons/facebook-icon.png", width: 80, height: 80 %>
+    <% end %>
+  </li>
+  
+  <li>
+    <%= link_to "https://www.linkedin.com/company/south-branch-family-practice?report.success=se2U8YjzSfSLqmrvJWfkzmUYKl6uKkphatxlAbbto9OkvCyhhsMCP1nNWIEQv6pq2D50iVxJ", target: "_blank", alt: "LinkedIn", class: "linkedin-link" do %>
+      <%= image_tag "icons/linkedin-icon.png", width: 80, height: 80 %>
+    <% end %>
+  </li>
+  
+  <li>
+   <%= link_to "https://plus.google.com/117788598261563774219/about?gl=US&hl=en-US", target: "_blank" , alt: "Google+", class: "google-plus-link" do %>
+     <%= image_tag "icons/google-plus-icon.png", width: 80, height: 80 %>
+   <% end %>
+  </li>
+</ul>

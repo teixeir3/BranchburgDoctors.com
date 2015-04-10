@@ -5,7 +5,7 @@ $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
 $navbar-height: 74px;
-$navbar-inverse-color: #352f9b;
+$navbarInverseColor: #352f9b;
 $navbar-inverse-link-color: #337ab7;
 //$navbarText: #eee;
 $navbarLinkColor: #2a59c7;
@@ -117,6 +117,26 @@ $navbar-default-link-color: yellow;
 .tint5:before { background: rgba(255,0,240, 0.5); }
 .tint6:before { background: rgba(255,102,0, 0.6); }
 
+.background-image {
+  background-size: cover;
+  font-weight: bold;
+  h1, h2, h3 {
+    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+  }
+}
+
+.row-padding { 
+  padding: 30px 30px 60px 30px;
+  min-height: 300px;
+}
+
+.patient_portal {
+  background-image: url("OfficePictures/patient_portal_home_1400x863_blur.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .downloads {
   background-color: $downloadsBackground;// url() top center no-repeat;
   color: $downloadsTextColor;
@@ -168,19 +188,7 @@ $navbar-default-link-color: yellow;
 .collpased > .navbar-nav {
   padding-left: 40px;
 }
-.background-image {
-  background-size: cover;
-  font-weight: bold;
-  h1, h2, h3 {
-    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: white;
-  }
-}
 
-.row-padding { 
-  padding: 30px 30px 60px 30px;
-  min-height: 300px;
-}
  
 .dropdown-submenu{position:relative;}
 .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
@@ -277,6 +285,20 @@ footer {
   width: auto;
   padding: 30px;
 }
+
+.social-links {
+  li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  li, a {
+    float: left;
+  }
+  img:hover {
+  opacity: 0.8;
+  }
+}
+
 
 #logo-nav {
   margin-bottom: 0px;
