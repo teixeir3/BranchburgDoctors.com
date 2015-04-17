@@ -6,8 +6,10 @@
 
  
 <% observances.each do |observance| %>
-
-  <div class="col-md-6">
+  <div class="col-md-4">
+    <%= render "observances/show", observance: observance %>
+  </div>
+  <div class="col-sm-6">
     <%= render "observances/show", observance: observance %>
   </div>
 <% end %>

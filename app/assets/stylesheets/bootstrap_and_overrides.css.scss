@@ -1,9 +1,18 @@
 // Set the correct sprite paths
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
+//$fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+//$fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+//$fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+//$fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+//$fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
 
 
 // BS Variables
+
+// Typography:
+$font-size-base: 18px !default;
+
 $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
 $navbar-height: 74px;
@@ -18,10 +27,10 @@ $brand-primary: #2a59c7;
 $downloadsBackground: #2d835d;
 $downloadsTextColor: white;
 $observancesBackground: #6c2a48;
-$observancesTextColor: black;
-$observancesLinkColor: #2a59c7;
+$observancesTextColor: white;
+$observancesLinkColor: white;
 
-
+//@import "fontawesome/font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap/theme";
@@ -123,6 +132,7 @@ $observancesLinkColor: #2a59c7;
 .background-image {
   background-size: cover;
   font-weight: bold;
+  background-attachment: fixed;
   h1, h2, h3 {
     text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
@@ -134,20 +144,35 @@ $observancesLinkColor: #2a59c7;
   min-height: 300px;
 }
 
-.patient_portal {
-  background-image: url("OfficePictures/patient_portal_home_1400x863_blur_tinted_bfbed4.png");
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.downloads {
+.services {
   background-color: $downloadsBackground;// url() top center no-repeat;
   color: $downloadsTextColor;
   background-image: url("OfficePictures/Office_front_cropped_blur_2067x1258.png");
-  background-size: cover;
-  background-attachment: fixed;
+  .service {
+    color: transparent;
+    width: 200px;
+    margin: auto;
+    &:hover {
+      color: black;
+      img {
+      opacity: .4;
+      }
+    }
+  }
 }
 .download:before { background: $downloadsBackground; }
+.patient_portal {
+  background-image: url("OfficePictures/patient_portal_home_1400x863_blur_Dark.png");
+  color: white;
+  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.downloads {
+//  background-color: $downloadsBackground;// url() top center no-repeat;
+//  color: $downloadsTextColor;
+  &:before { background: $downloadsBackground; }
+}
+
 
 .observance-form {
   margin: auto;
@@ -168,7 +193,10 @@ $observancesLinkColor: #2a59c7;
   }
   .observance {
     text-align: center;
+    height: 250px;
+    width: 250px;
     color: black;
+    background: black;
     display: block;
 //    width: auto;
     margin: auto;

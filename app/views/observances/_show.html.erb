@@ -1,9 +1,11 @@
 <div class="observance">
-  <h2><%= link_to observance.name, observance.link %></h2>
+  <%= link_to observance.link do %>
+    <h2><%= observance.name %></h2>
   
-  <p><%= observance.description %></p>
-  <% if current_user_is_admin? %>
-    <div><%= link_to 'Edit', edit_observance_path(observance) %></div>
-    <div><%= link_to 'Destroy', observance, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <p><%= observance.description %></p>
+    <% if current_user_is_admin? %>
+      <div><%= link_to 'Edit', edit_observance_path(observance) %></div>
+      <div><%= link_to 'Destroy', observance, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <% end %>
   <% end %>
 </div>

@@ -15,7 +15,7 @@
 //= require turbolinks
 
 //= require bootstrap-sprockets
-
+//= require animate-scroll
 
 
 var setFilepickerKey = function() {
@@ -166,8 +166,9 @@ var removeClasses = function(classHash) {
 };
 // toggleHash is a hash matching pattern [{ "elem": "addClassName"}, { "elem": "removeClassName"}]
 var scrollCheck = function(breakPoint) {
-  console.log("scrollTop(): " + $(this).scrollTop());
-  console.log("breakPoint: " + breakPoint);
+  // TODO: Remove 
+  // console.log("scrollTop(): " + $(this).scrollTop());
+  // console.log("breakPoint: " + breakPoint);
 
   if ($(this).scrollTop() >= breakPoint) {
     return true;
@@ -254,7 +255,7 @@ $(document).on("ajax:complete", function(event){
 });
 
 $(document).on('page:fetch', function() {
-  spinOn();
+  window.spinner.on();
 });
 
 // Bind event listeners for TurboLinks
@@ -269,6 +270,11 @@ $(document).on('page:change', function() {
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
   
+  $('.anchored').on("click", function(event) {
+   event.preventDefault(); 
+   // console.log();
+   $($(event.target).data("anchor")).animatescroll({padding:71});  
+  });
   
   $('.deletable').bind('ajax:success', rowFadeout);
   
