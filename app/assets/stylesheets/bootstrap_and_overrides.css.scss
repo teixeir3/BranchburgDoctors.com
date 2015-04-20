@@ -150,13 +150,49 @@ $observancesLinkColor: white;
   background-image: url("OfficePictures/Office_front_cropped_blur_2067x1258.png");
   .service {
     color: transparent;
-    width: 200px;
+    width: 240px;
     margin: auto;
+    position: relative;
+    .thumbnail {
+      min-height: 336px;
+    }
+    .service-link {
+      padding: 20px;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+    .img {
+      transition:all 1s;
+      -webkit-transition:all 1s;
+      -moz-transition:all 1s;
+      -o-transition:all 1s;
+    }
     &:hover {
       color: black;
       img {
-      opacity: .4;
+        opacity: 0.15;
+        transition:all 1s;
+        -webkit-transition:all 1s;
+        -moz-transition:all 1s;
+        -o-transition:all 1s;
       }
+      .service-description {
+        color: black;
+      }
+    }
+    .service-description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-weight: bold;
+      color: transparent;
+      /* background: #0c6; */
+      padding: 50px 10px 20px 10px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      height: 240px;
+      width: 240px;
     }
   }
 }
@@ -194,15 +230,25 @@ $observancesLinkColor: white;
   .observance {
     text-align: center;
     height: 250px;
-    width: 250px;
+    width: 350px;
     color: black;
+    padding: 20px;
     background: black;
     display: block;
 //    width: auto;
     margin: auto;
     border-radius: 4px;
+    transition:all 1s;
+     -webkit-transition:all 1s;
+     -moz-transition:all 1s;
+     -o-transition:all 1s;
+    &:hover {
+      background: lighten(black, 20%);
+    }
   }
 }
+
+
 //
 //.background-blur {
 //  filter: blur(5px);

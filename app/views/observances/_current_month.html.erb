@@ -6,16 +6,13 @@
 
  
 <% observances.each do |observance| %>
-  <div class="col-md-4">
-    <%= render "observances/show", observance: observance %>
-  </div>
-  <div class="col-sm-6">
+  <div class="col-md-4 col-sm-6 col-xs-12">
     <%= render "observances/show", observance: observance %>
   </div>
 <% end %>
 
 
 
-<div class="col-md-6">
+<div class="col-md-4 col-sm-6 col-xs-12">
   <%= link_to 'New Observance', new_observance_path if current_user_is_admin? %>
 </div>

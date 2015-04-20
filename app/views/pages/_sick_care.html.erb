@@ -1,4 +1,11 @@
-<%= image_tag("icons/facebook-icon.png", height: 200, width: 200) do %>
-  <div class="service-description">Recommended tests and procedures: catch diseases before they start.</div>
-<% end %>
-<h2 class="text-center">Sick Care</h2>
+<div class="service">
+  <%= link_to page_path("sick_care"), class: "thumbnail" do %>
+    <%= image_tag "icons/sick_care_256x256_ver2.png", height: 200, width: 200 %>
+    <div class="service-description text-center">
+      Recommended tests and procedures: catch diseases before they start.
+    </div>
+    
+    <h2 class="text-center">Sick Care</h2>
+  <% end %>
+  
+</div>
