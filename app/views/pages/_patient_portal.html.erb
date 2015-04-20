@@ -1,42 +1,53 @@
 <div class="col-md-12 text-center">
-   <h1>Patient Portal:</h1>
-  <%= link_to "Patient Portal Login", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx", class: "btn btn-primary btn-lg", target: "_blank" %>
-</div>
-
-<div class="col-md-6">
-  <div>
-    <h1>Features:</h1>
-  </div>
   
-  <div>
-    <ul>
-      <li>View your Electronic Health Record.</li>
-      <li>Update demographic / insurance information to reduce wait times.</li>
-      <li>View test results.</li>
-      <li>Monitor prescription list, request refills on Prescriptions , and much more!</li>
-      <li>Picture of Patient Portal Login page.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="col-md-6">
-  <h2> <strong>Important</strong> Password Change Needed:</h2>
-  <p>To ensure security on your patient portal account, change your password the first time you log on.</p>
-
-  <ol>
-    <li>Click the "My Setting" button at the top left of the screen (the wrench icon).</li>
-    <li>Change your password by entering the old one provided to you and confirm your new password</li>
-    <li>Hit the "Save" button below.</li>
-    <li>Set a security question / answer to verify account information if needed.</li>
-    <li>Hit the "Save" button below.</li>
-    <li>Hit the "Done" button at the bottom right-hand corner of the screen and you're ready to go!</li>
-  </ol>
+    <%= link_to "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx" do %>
+      <div class="jumbotron">
+        <h1>Patient Portal:</h1>
+        <%= link_to "Patient Portal Login", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx", class: "btn btn-primary btn-lg", target: "_blank" %>
+      </div>
+    <% end %>
 </div>
 
 <div class="col-md-12 text-center">
-   <h2 >Our New System is Electronic:</h2>
-   <p> To receive your Patient Portal account username and password, please contact us. Ask the front desk for your account information at your next appointment. </p>
+  <div class="">
+    <div>
+      <h1>Features:</h1>
+    </div>
+  
+    <div>
+      <ul class="list-group">
+        <li class="list-group-item blurb">View your Electronic Health Record.</li>
+        <li class="list-group-item blurb">Update demographic / insurance information to reduce wait times.</li>
+        <li class="list-group-item blurb">View test results.</li>
+        <li class="list-group-item blurb">Monitor prescription list, request refills on Prescriptions , and much more!</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-   <p>The Patient Portal is a part of our new effort of providing an electronic medical records (EMR) system to achieve the goal of increased efficiency, speed, and ease of use to all parties involved.  iPatient is our software provider in this effort, helping to provide and support the Patient Portal where you can view your electronic medical records, ensuring that the creation, transfer, and storage of your medical records is done safely, securely, and reliably.</p>
+<div class="col-md-12 text-center">
+  <div class="blurb">
+    <h2> <strong>Important</strong> Password Change Needed:</h2>
+    <p>To ensure security on your patient portal account, change your password the first time you log on.</p>
 
+    <ol>
+      <li>Click the "My Setting" button at the top left of the screen (the wrench icon).</li>
+      <li>Change your password by entering the old one provided to you and confirm your new password</li>
+      <li>Hit the "Save" button below.</li>
+      <li>Set a security question / answer to verify account information if needed.</li>
+      <li>Hit the "Save" button below.</li>
+      <li>Hit the "Done" button at the bottom right-hand corner of the screen and you're ready to go!</li>
+    </ol>
+  </div>
+</div>
+
+<div class="col-md-12 text-center">
+  <div class="blurb">
+  
+     <h2 >Our New System is Electronic:</h2>
+     <p> To receive your Patient Portal account username and password, please contact us. Ask the front desk for your account information at your next appointment. </p>
+
+     <p>The Patient Portal is a part of our new effort of providing an electronic medical records (EMR) system to achieve the goal of increased efficiency, speed, and ease of use to all parties involved.  iPatient is our software provider in this effort, helping to provide and support the Patient Portal where you can view your electronic medical records, ensuring that the creation, transfer, and storage of your medical records is done safely, securely, and reliably.</p>
+
+  </div>
 </div>
