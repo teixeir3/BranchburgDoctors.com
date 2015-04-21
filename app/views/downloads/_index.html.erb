@@ -1,5 +1,10 @@
 <div class="col-md-12 text-center">
-  <h1>Patient Resources: </h1> 
+  <span class="anchor" id="resources"></span>
+  
+  <div class="page-header">
+    <h1><%= link_to "Patient Resources:", downloads_path %> </h1>
+  </div>
+ 
   
   <%= link_to 'New Download', new_download_path, class: "right" if current_user_is_admin? %>
 </div>

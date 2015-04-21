@@ -34,6 +34,8 @@ $observancesBackground: #B62840;
 $observancesTextColor: white;
 $observancesLinkColor: white;
 
+$servicesTextColor: black;
+
 $patient-portal-text-color: black;
 $text-shadow: black;
 
@@ -104,8 +106,8 @@ $text-shadow: black;
 }
 
 .btn-lg {
-  width: 50%;
   font-size: 24px;
+  width: 60%;
 }
 
 .row > h1 {
@@ -155,15 +157,32 @@ $text-shadow: black;
   min-height: 300px;
 }
 
+.anchor {
+  position: relative;
+  display: block;
+  top: -123px;
+}
+
+.service {
+  color: $servicesTextColor;
+  background: $brand-primary-transparent;
+  font-size: 24px;
+}
+
 .services {
   
  
   background-color: $downloadsBackground;// url() top center no-repeat;
-  color: $downloadsTextColor;
   background-image: url("OfficePictures/Office_front_cropped_blur_2067x1258.png");
+  a {
+    color: black;
+  }
+  
   .service {
     color: transparent;
     position: relative;
+    min-height: 402px;
+    background: inherit;
     .thumbnail {
       min-height: 336px;
       &:before {
@@ -187,6 +206,7 @@ $text-shadow: black;
       color: black;
       img {
         opacity: 0.15;
+        zoom: 110%;
         transition:all 500ms;
         -webkit-transition:all 500ms;
         -moz-transition:all 500ms;
@@ -194,6 +214,7 @@ $text-shadow: black;
       }
       .service-description {
         color: black;
+        width: 100%;
       }
     }
     .service-description {
@@ -213,11 +234,6 @@ $text-shadow: black;
 }
 .download:before { background: $downloadsBackground; }
 .patient-portal {
-  .patient-portal-anchor {
-    position: relative;
-    display: block;
-    top: -123px;
-  }
   .jumbotron {
     background: inherit;
   }
@@ -305,7 +321,10 @@ $text-shadow: black;
 
 .right { float: right;}
 
-.navbar { border: none; }
+.navbar { 
+  border: none;
+  z-index: 1;
+}
 
 .collpased > .navbar-nav {
   padding-left: 40px;
@@ -454,6 +473,9 @@ body {
 
 // Small
 @media (max-width: 768px) {
+  .btn-lg {
+    width: 100%;
+  }
   
   .container {
     width: 100%;
@@ -578,12 +600,22 @@ body {
   
 }
 
-.collapsed .navbar-brand{
-  top: 0px;
-  transition:all 1s;
-  -webkit-transition:all 1s;
-  -moz-transition:all 1s;
-  -o-transition:all 1s;
+.collapsed {
+  .navbar {
+    margin-bottom: 0px;
+  }
+  
+  .alert {
+    opacity: .9;
+  }
+  
+  .navbar-brand {
+    top: 0px;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+  }
 }
 
 .collapsed .main-nav {

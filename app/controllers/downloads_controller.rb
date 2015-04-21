@@ -46,6 +46,7 @@ class DownloadsController < ApplicationController
         format.html { redirect_to @download, notice: 'Download was successfully created.' }
         format.json { render action: 'show', status: :created, location: @download }
       else
+        flash.now[:error] = @download.errors.full_messages
         format.html { render action: 'new' }
         format.json { render json: @download.errors, status: :unprocessable_entity }
       end
@@ -60,6 +61,7 @@ class DownloadsController < ApplicationController
         format.html { redirect_to @download, notice: 'Download was successfully updated.' }
         format.json { head :no_content }
       else
+        flash.now[:error] = @download.errors.full_messages
         format.html { render action: 'edit' }
         format.json { render json: @download.errors, status: :unprocessable_entity }
       end

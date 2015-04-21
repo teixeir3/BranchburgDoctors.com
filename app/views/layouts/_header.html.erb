@@ -32,7 +32,7 @@
         
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="<%= root_path(anchor: "patient-portal") %>">Patient Portal <span class="sr-only">(current)</span></a></li>
-          <li><a href="<%= "#" %>">Patient Resources</a></li>
+          <li><%= link_to "Patient Resources", root_url(anchor: "resources") %></li>
           <li class="dropdown">
             <a href="<%= page_path("doctors") %>">Physicians <span class="caret"></span></a>
             <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
@@ -41,7 +41,7 @@
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+            <a href="<%= root_path(anchor: "services") %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
             <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
               <li><%= link_to "Preventive Medicine", page_path("preventive_medicine") %></li>
               <li><%= link_to "Surgery", page_path("surgery") %></li>
@@ -77,4 +77,19 @@
       </div>
     </div>
 </nav>
+<% flash.each do |name, msgArr| %>
+  <% if (msgArr.class == Array) %>
+    <% msgArr.each do |msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+  <% else %>
+  <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= msgArr %>
+  </div>
+  <% end %>
+<% end %>
 </header>

@@ -30,12 +30,7 @@
   
     <%= render "layouts/messages", messages_arr: flash[:notices], class_name: "notices" if flash[:notices] %>
     <%= render "layouts/messages", messages_arr: flash[:errors], class_name: "errors" if flash[:errors] %>
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-        <a class="close" data-dismiss="alert">×</a>
-        <%= msg %>
-      </div>
-    <% end %>
+   
   <!-- End Notification Area. ************************************************* -->
   
   
