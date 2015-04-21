@@ -20,15 +20,22 @@ $navbar-height: 74px;
 $navbar-inverse-bg: darken(#222, 15%);
 $navbar-inverse-color: white;
 $navbar-inverse-link-color: #337ab7;
+
 $gray-light: #337ab7;
 $brand-primary: #2a59c7;
+$brand-primary-transparent: rgba(42, 89, 199, 0.5);
+
 
 // Variables
 $downloadsBackground: #2d835d;
 $downloadsTextColor: white;
+
 $observancesBackground: #B62840;
 $observancesTextColor: white;
 $observancesLinkColor: white;
+
+$patient-portal-text-color: black;
+$text-shadow: black;
 
 //@import "fontawesome/font-awesome";
 @import "bootstrap-sprockets";
@@ -96,6 +103,10 @@ $observancesLinkColor: white;
   padding: 30px;
 }
 
+.btn-lg {
+  width: 50%;
+  font-size: 24px;
+}
 
 .row > h1 {
   padding-left: 30px;
@@ -134,8 +145,8 @@ $observancesLinkColor: white;
   font-weight: bold;
   background-attachment: fixed;
   h1, h2, h3 {
-    text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: white;
+    //text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+//    color: white;
   }
 }
 
@@ -145,19 +156,22 @@ $observancesLinkColor: white;
 }
 
 .services {
+  
+ 
   background-color: $downloadsBackground;// url() top center no-repeat;
   color: $downloadsTextColor;
   background-image: url("OfficePictures/Office_front_cropped_blur_2067x1258.png");
   .service {
     color: transparent;
-    width: 240px;
-    margin: auto;
     position: relative;
     .thumbnail {
       min-height: 336px;
+      &:before {
+        background: transparent;
+      }
     }
     .service-link {
-      padding: 20px;
+      padding-top: 20px;
     }
     h2 {
       text-transform: uppercase;
@@ -168,6 +182,7 @@ $observancesLinkColor: white;
       -moz-transition:all 500ms;
       -o-transition:all 500ms;
     }
+    &:before { background: $downloadsBackground; }
     &:hover {
       color: black;
       img {
@@ -184,40 +199,49 @@ $observancesLinkColor: white;
     .service-description {
       position: absolute;
       top: 0;
-      left: 0;
+//      left: 0;
       font-weight: bold;
       color: transparent;
       /* background: #0c6; */
       padding: 50px 10px 20px 10px;
       font-size: 12px;
-      letter-spacing: 3px;
-      height: 240px;
-      width: 240px;
+      letter-spacing: 2px;
+//      height: 240px;
+//      width: 240px;
     }
   }
 }
 .download:before { background: $downloadsBackground; }
-.patient_portal {
-  .jumbotron{
+.patient-portal {
+  .patient-portal-anchor {
+    position: relative;
+    display: block;
+    top: -123px;
+  }
+  .jumbotron {
     background: inherit;
   }
-  background-image: url("OfficePictures/patient_portal_home_1400x863_blur_Dark.png");
-  color: white;
-  text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  .list-group-item {
-    background: inherit;
-    border: inherit;
-  }
-  
-  .blurb {  
-    border-radius: 4px;
+  background-image: url("OfficePictures/patient_portal_home_1400x863_blur_tinted_bfbed4.png");
+  color: $patient-portal-text-color;
+  //text-shadow:-1px 0 $text-shadow, 0 1px $text-shadow, 1px 0 $text-shadow, 0 -1px $text-shadow;
+  .blurb {
     padding: 20px 20px 30px 20px;
-    &:hover {
-      background: #333;
-    }
+    font-size: 20px;
   }
 }
+.list-group-item {
+  background: inherit;
+  border: inherit;
+}
 
+.blurb {  
+  border-radius: 4px;
+  &:hover {
+    background: $brand-primary;
+    background: $brand-primary-transparent
+
+  }
+}
 
 .downloads {
 //  background-color: $downloadsBackground;// url() top center no-repeat;
@@ -230,9 +254,9 @@ $observancesLinkColor: white;
   margin: auto;
 }
 
-.observances:before { background: $observancesBackground; }
+//.observances:before { background: $observancesBackground; }
 .observances {
-  background-color: $observancesBackground;// url("OfficePictures/Patient_room_from_door_wide.JPG") top center no-repeat;
+  background-color: $brand-primary;// url("OfficePictures/Patient_room_from_door_wide.JPG") top center no-repeat;
   background-image: url("OfficePictures/Patient_room_from_door_wide_blur_2896x1944.png");
   color: $observancesTextColor;
   background-size: cover;
@@ -259,7 +283,7 @@ $observancesLinkColor: white;
      -moz-transition:all 3s;
      -o-transition:all 3s;
     &:hover {
-      background: lighten(black, 20%);
+      background: lighten($brand-primary, 15%);
     }
    
   }
@@ -327,6 +351,10 @@ $observancesLinkColor: white;
 
 .main-content {
   padding-bottom: 0px;
+}
+
+main {
+  margin-top: -40px;
 }
 
 body {

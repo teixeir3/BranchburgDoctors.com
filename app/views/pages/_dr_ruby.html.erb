@@ -1,28 +1,44 @@
 <div class="col-md-12 text-center">
-  <h1>Meet Ruby Halper-Erkkila, MD:<h1>
+  <div class="page-header">
+    <h1>Meet Ruby Halper-Erkkila, MD:<h1>
+  </div>
 </div>
 
 <div class="col-md-6">
   <h2>About Dr. Ruby:</h2>
-  <ul>
-    <li>Board Certified: Family Practice</li>
-
-    <li>Specialty: Family Medicine</li>
-
-    <li>Medical School: <%= link_to "Temple University School of Medicine", "http://www.temple.edu/medicine/" %></li>
-
-    <li>Residency/Fellowship: <%= link_to "RWJ University Hospital", "http://www.rwjuh.edu/rwjuh/home.aspx" %></li>
-
-    <li>Hospital Affiliation: <%= link_to "RWJ University Hospital", "http://www.rwjuh.edu/rwjuh/home.aspx" %></li>
-  
-    <li>Phone Number: <%= link_to "(908) 526-8300", page_path("contact") %></li>
-
-    <li>Practicing Medicine since: 1988</li>
+  <ul class="list-group">
+    <li class="list-group-item blurb">
+      Board Certified: Family Practice
+    </li>
+    
+    <li class="list-group-item blurb">
+      Specialty: Family Medicine
+    </li>
+    
+    <li class="list-group-item blurb">
+      Medical School: <%= link_to "Temple University School of Medicine", "http://www.temple.edu/medicine/" %>
+    </li>
+    
+    <li class="list-group-item blurb">
+      Residency/Fellowship: <%= link_to "RWJ University Hospital", "http://www.rwjuh.edu/rwjuh/home.aspx" %>
+    </li>
+    
+    <li class="list-group-item blurb">
+      Hospital Affiliation: <%= link_to "RWJ University Hospital", "http://www.rwjuh.edu/rwjuh/home.aspx" %>
+    </li>
+    
+    <li class="list-group-item blurb">
+      Phone Number: <%= link_to "(908) 526-8300", page_path("contact") %>
+    </li>
+    
+    <li class="list-group-item blurb">
+      Practicing Medicine since: 1988
+    </li>
   </ul>
 </div>
 
 <div class="col-md-6">
-  <%= image_tag "DrRuby_no_bg_144x180px.png", width: 144, height: 180, class: "doctor_ruby" %>
+  <%= image_tag "DrRuby_no_bg_144x180px.png", width: 144, height: 180, class: "doctor_ruby", alt: "Dr. Ruby Halper-Erkkila" %>
 </div>
 <div class="col-md-12">
   <div class="bio">

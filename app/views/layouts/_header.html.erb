@@ -27,11 +27,11 @@
       <div class="main-nav collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav">
           <a class="navbar-brand navbar-brand-big" href="<%= root_url %>"><%= image_tag("sbfp_logo_no_url_90x74.png", alt: "South Branch Family Practice") %></a>
-          <li><a href="<%= root_path %>">Home</a></li>  
+          <li><a href="<%= root_path %>"><i class="fa fa-lg fa-home fa-fw"></i>&nbsp; Home</a></li>  
         </ul>
         
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Patient Portal <span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="<%= root_path(anchor: "patient-portal") %>">Patient Portal <span class="sr-only">(current)</span></a></li>
           <li><a href="<%= "#" %>">Patient Resources</a></li>
           <li class="dropdown">
             <a href="<%= page_path("doctors") %>">Physicians <span class="caret"></span></a>

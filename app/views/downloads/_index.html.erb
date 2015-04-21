@@ -1,5 +1,6 @@
 <div class="col-md-12 text-center">
   <h1>Patient Resources: </h1> 
+  
   <%= link_to 'New Download', new_download_path, class: "right" if current_user_is_admin? %>
 </div>
 
@@ -7,12 +8,12 @@
   
     <% downloads.each do |download| %>
       <div class="col-md-<%= (downloads.empty?) ? "12" : "#{12/downloads.count}" %>">
-        <ul>
-          <li><%= download.title %></li>
-          <li>New Patients Welcome!</li>
-          <li>Print and fill out your Demographics Info sheet before your visit.</li>
-          <li>Download New Patient Welcome Packet for more information.</li>
-          <li>To understand our Referral policy, click here.</li>
+        <ul class="list-group">
+          <li class="list-group-item"><%= download.title %></li>
+          <li class="list-group-item">New Patients Welcome!</li>
+          <li class="list-group-item">Print and fill out your Demographics Info sheet before your visit.</li>
+          <li class="list-group-item">Download New Patient Welcome Packet for more information.</li>
+          <li class="list-group-item">To understand our Referral policy, click here.</li>
         </ul>
       </div>
     <% end %>

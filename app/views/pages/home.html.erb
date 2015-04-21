@@ -4,8 +4,11 @@
   <div class="col-md-12 welcome">
       <h1>Welcome to South Branch Family Practice</h1>
       <p class="">Julie Ann Juliano, MD | Ruby Halper-Erkkila, MD</p>
+      
+      <p><%= link_to "Access Patient Portal", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx", class: "btn btn-primary btn-lg" %></p>
+      
   </div>
-  <%= render "pages/maintenance" %>
+
 </div>
 
 <div class="row row-padding services tint background-image">
@@ -19,7 +22,7 @@
 </div>
 
 
-<div class="row row-padding patient_portal background-image">
+<div class="row row-padding patient-portal background-image">
   <%= render "pages/patient_portal" %>
 </div>
 
