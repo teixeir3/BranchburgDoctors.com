@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
 
     if @user
       sign_in(@user)
-      flash[:notices] = ["Welcome #{@user.name}"]
+      flash[:notice] = ["Welcome #{@user.name}"]
       session[:return_url] = request.referrer unless session[:return_url]
       redirect_to :back# session[:return_url]
     else
@@ -37,9 +37,9 @@ class SessionsController < ApplicationController
     current_user.update_omniauth!(env["omniauth.auth"])
     
     if current_user.valid?
-      flash[:notices] = ["Facebook Credentials Added!"]
+      flash[:notice] = ["Facebook Credentials Added!"]
     else
-      flash[:errors] = ["An Error Has Occurred!"] + current_user.errors.full_messages
+      flash[:error] = ["An Error Has Occurred!"] + current_user.errors.full_messages
     end
     
     redirect_to edit_user_url(current_user)

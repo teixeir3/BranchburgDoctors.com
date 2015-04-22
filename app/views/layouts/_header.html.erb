@@ -66,7 +66,7 @@
             </a>
             <ul class="pull-right dropdown-menu inverse-dropdown" role="menu">
               <% if signed_in? %>
-                <li><%= link_to_destroy "Sign Out", session_url, root_url %></li>
+                <li><%= button_to "Sign Out", session_url, method: :delete, class: "btn btn-link" %></li>
               <% else %>
                 <li><%= link_to "Sign In", new_session_url %></li>
               <% end %>

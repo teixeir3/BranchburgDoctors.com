@@ -1,6 +1,7 @@
 class DownloadsController < ApplicationController
-  before_action :set_download, only: [:show, :edit, :update, :destroy]
-  before_action :set_downloads, only: [:index]
+  before_action :set_download, only: [:show, :edit, :update, :destroy, :index]
+  before_action :require_signed_in!, only: [:new, :edit, :destroy, :update, :create]
+  
   
   # GET /downloads
   # GET /downloads.json
@@ -29,7 +30,7 @@ class DownloadsController < ApplicationController
 
   # GET /downloads/new
   def new
-    @download = current_user.downloads.build(permitted_params.download)
+    @download = current_user.downloads.build()
   end
 
   # GET /downloads/1/edit

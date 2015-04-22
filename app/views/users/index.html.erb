@@ -1,25 +1,44 @@
-<h1>Listing users</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="page-header">
+      <h1>SBFP Staff:</h1>  
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="col-xs-12">
+  <div class="table-responsive">
+    <table class="table table-condensed table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Title</th>
+          <th></th>
+          <% if current_user_is_admin? %>
+            <th></th>
+            <th></th>
+          <% end %>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= link_to user.full_name, user %></td>
+            <td><%= user.title %></td>
+            <td><%=  %></td>
+            <% if current_user_is_admin? %>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New User', new_user_path %>
+  <%= link_to 'New User', new_user_path if current_user_is_admin? %>
+  
+</div>
+
