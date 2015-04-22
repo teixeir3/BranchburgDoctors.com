@@ -170,8 +170,11 @@ $text-shadow: black;
 .tint5:before { background: rgba(255,0,240, 0.5); }
 .tint6:before { background: rgba(255,102,0, 0.6); }
 
-.image-col img {
+.img-col img {
   width: 100%;
+}
+
+.img-padding img {
   padding: 5%;
 }
 
@@ -307,6 +310,12 @@ $text-shadow: black;
 
 .observance-form {
   margin: auto;
+}
+
+// Forms
+
+.form-actions {
+  margin-top: 20px;
 }
 
 //.observances:before { background: $observancesBackground; }

@@ -16,7 +16,7 @@
 
 //= require bootstrap-sprockets
 //= require animate-scroll
-
+//= require fileinput
 
 var setFilepickerKey = function() {
   filepicker.setKey("<%= ENV['FILEPICKER_KEY'] %>")
@@ -269,6 +269,11 @@ $(document).on('page:change', function() {
   
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
+  
+  $(".file-input").fileinput({
+    removeClass: "btn btn-danger",
+    uploadClass: "btn btn-success"
+  });
   
   $('[data-toggle="popover"]').popover()
   

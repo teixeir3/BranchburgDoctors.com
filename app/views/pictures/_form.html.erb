@@ -21,14 +21,11 @@
   <%= f.input :position %>
   <%= f.input :display %>
   
-  <span class="btn btn-primary btn-file">
-      Browse <%= f.input :image, type: "file", id: "photo" %>
+  <span class="">
+       <input type="file" class="file-input" name="picture[:image]">
   </span>
   
-  <span class="btn btn-default btn-file">
-      Browse <input type="file">
-  </span>
-  
+ 
  
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn btn-primary' %>

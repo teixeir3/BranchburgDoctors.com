@@ -1,18 +1,69 @@
-<h1>Blood Draw</h1>
+<div class="row ">
+  <div class="col-xs-12 text-center">
+    <div class="page-header">
+      <h1><%= image_tag "icons/blood_draw_icon_256x256.png", height: 50, width: 50, class: "" %> Blood Draw: <small>Available in-house with BioReference Laboratories</small></h1>
+    </div>
+  </div>
+  
+  <div class="col-xs-12 text-center">
 
-Phlebotomist: For your convenience we have in-house blood draw available from Bio-Reference Laboratories. 
-Hours of Operation for the Phlebotomist:
-Blood Draw Tubes
-Monday: 8:00 am - 12:00 pm &  1:00 pm - 4:00 pm
+<h2>Phlebotomist: For your convenience we have in-house blood draw available from Bio-Reference Laboratories.</h2>
 
-Tuesday 8:00 am - 12:00 pm &  1:00 pm - 4:00 pm
-
-Wednesday: 8:00 am -12:00 pm
-
-Thursday: 8:00 am - 12:00 pm &  1:00 pm - 4:00 pm
-
-Friday: 8:00 am - 12:00 pm &  1:00 pm - 4:00 pm
-
-Saturday & Sunday: Closed
-Bio Reference Billing Questions:
-Phone:     908-334-9766
+  <div class="col-xs-12 col-sm-6">
+    <label for="blood-draw-hours">Phlebotomist Hours:</label>
+    <div class="table-responsive blood-draw-hours">
+     <table class="table table-condensed table-hover">
+       <thead>
+         <tr>
+           <th>Day</th>
+           <th>&nbsp &nbsp &nbsp &nbsp Daytime Hours</th>
+           <th>&nbsp &nbsp Evening Hours</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <th scope="row"> Monday:</th>
+           <td>08:00AM - 12:00PM</td>
+           <td>01:00PM - 04:00PM</td>
+         </tr>
+         <tr>
+           <th scope="row">Tuesday:</th>
+           <td>08:00AM - 12:00PM</td>
+           <td>01:00PM - 04:00PM</td>
+         </tr>
+         <tr>
+           <th scope="row">Wednesday:</th>
+           <td>9:00AM- 12:00PM</td>
+           <td>Closed</td>
+         </tr>
+         <tr>
+           <th scope="row">Thursday:</th>
+           <td>08:00AM - 12:00PM</td>
+           <td>01:00PM - 04:00PM</td>
+         </tr>
+         <tr>
+           <th scope="row">Friday:</th>
+           <td>08:00AM - 12:00PM</td>
+           <td>01:00PM - 04:00PM</td>
+         </tr>
+         <tr>
+           <th scope="row">Saturday:</th>
+           <td>Closed</td>
+           <td>Closed</td>
+         </tr>
+         <tr>
+           <th scope="row">Sunday:</th>
+           <td>Closed</td>
+           <td>Closed</td>
+         </tr>
+       </tbody>
+     </table>
+     
+    </div>
+  </div>
+  
+  <div class="col-xs-12 col-sm-6 img-col">
+    <%= image_tag("OfficePictures/Blood_draw_supplies.JPG", alt: "Blood Draw") %>
+    <p>Bio Reference Billing Questions Call: (908) 334-9766</p>
+  </div>
+</div>
