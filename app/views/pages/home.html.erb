@@ -5,7 +5,7 @@
       <h1>Welcome to South Branch Family Practice</h1>
       <p class="">Julie Ann Juliano, MD | Ruby Halper-Erkkila, MD</p>
       
-      <p><%= link_to "Access Patient Portal", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx", class: "btn btn-primary btn-lg" %></p>
+      <p><%= link_to "Access Patient Portal", ENV["PATIENT_PORTAL_URL"], class: "btn btn-primary btn-lg", target: "_blank" %></p>
       
   </div>
 

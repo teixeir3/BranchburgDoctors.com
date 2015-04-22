@@ -18,7 +18,8 @@
 
 class Picture < ActiveRecord::Base
   
-  validate :title, :imageable, presence: true
+  validate :title, presence: true, allow_blank: false
+  validate :image, presence: true
   
   belongs_to :imageable, polymorphic: true, inverse_of: :pictures
   
@@ -27,5 +28,12 @@ class Picture < ActiveRecord::Base
                     :default_url => ":style/promotion_missing.png",
                     :bucket => ENV["AWS_BUCKET"]
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  
+  def title
+    (imageable && imageable.title?) ? imageable.title : image_file_name
+  end
+  
+
+  
   
 end

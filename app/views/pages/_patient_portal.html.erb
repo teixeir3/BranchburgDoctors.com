@@ -1,9 +1,9 @@
 <div class="col-md-12 text-center">
     <span class="anchor" id="patient-portal"></span>
-    <%= link_to "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx" do %>
+    <%= link_to ENV["PATIENT_PORTAL_URL"], target: "_blank" do %>
       <div class="jumbotron">
         <h1>Patient Portal:</h1>
-        <%= link_to "Patient Portal Login", "https://ipatient.branchburgdoctors.com/patientportal/loginnew.aspx", class: "btn btn-primary btn-lg", target: "_blank" %>
+        <%= link_to "Patient Portal Login", ENV["PATIENT_PORTAL_URL"], class: "btn btn-primary btn-lg", target: "_blank" %>
       </div>
     <% end %>
 </div>

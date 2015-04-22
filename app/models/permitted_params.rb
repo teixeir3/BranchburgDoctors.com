@@ -35,6 +35,14 @@ class PermittedParams < Struct.new(:params, :current_user)
     @download_attributes ||= [:title, :position, :display, :user]
   end
   
+  def picture
+    @picture_params ||= params.require(:picture).permit(picture_attributes)
+  end
+  
+  def picture_attributes
+    @picture_attributes ||= [:title, :position, :display, :image]
+  end
+  
   
   # Not backed up by a model.
   # TODO: Make a form model for contact_me form

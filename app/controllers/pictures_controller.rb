@@ -25,7 +25,7 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(picture_params)
+    @picture = Picture.new(permitted_params.picture)
 
     respond_to do |format|
       if @picture.save
@@ -42,7 +42,7 @@ class PicturesController < ApplicationController
   # PATCH/PUT /pictures/1.json
   def update
     respond_to do |format|
-      if @picture.update(picture_params)
+      if @picture.update(permitted_params.picture)
         format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
         format.json { head :no_content }
       else
@@ -66,10 +66,5 @@ class PicturesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_picture
       @picture = Picture.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def picture_params
-      params[:picture]
     end
 end

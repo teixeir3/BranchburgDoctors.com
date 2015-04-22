@@ -270,6 +270,8 @@ $(document).on('page:change', function() {
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
   
+  $('[data-toggle="popover"]').popover()
+  
   $('.anchored').on("click", function(event) {
    event.preventDefault(); 
    // console.log();
