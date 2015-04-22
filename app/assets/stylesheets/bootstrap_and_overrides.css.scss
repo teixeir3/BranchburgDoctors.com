@@ -170,6 +170,15 @@ $text-shadow: black;
 .tint5:before { background: rgba(255,0,240, 0.5); }
 .tint6:before { background: rgba(255,102,0, 0.6); }
 
+.image-col img {
+  width: 100%;
+  padding: 5%;
+}
+
+.front-office-bg {
+  background-image: url("OfficePictures/Office_front_cropped_2067x1258.png");
+}
+
 .background-image {
   background-size: cover;
   font-weight: bold;
@@ -544,7 +553,7 @@ body {
 // medium +
 @media (min-width: 768px) {
   .address-container {
-    padding: 15px 5px 0px 0px;
+    padding: 10% 5px 0px 0px;
   }
   //.container {
 //    width: 100%;

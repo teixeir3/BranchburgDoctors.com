@@ -8,7 +8,9 @@
 
       
         <div class="col-xs-12">
-          <%= render "pages/address" %>
+          <%= link_to page_path("contact") do %>
+            <%= render "pages/address" %>
+          <% end %>
           <!-- <a class="address" href="<%= page_path("directions") %>">
             <ul>
               <% 0.upto(ENV["ADRESS_LINE_COUNT"].to_i) do |i| %>
