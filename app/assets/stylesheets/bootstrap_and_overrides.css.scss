@@ -91,7 +91,9 @@ $text-shadow: black;
 //}
 
 
-
+.font-md {
+  font-size: $font-size-base;
+}
 
 // ############## Home page columns ###########
 
@@ -356,8 +358,8 @@ $text-shadow: black;
 
 
  
-.address {
-//  color: black;
+footer .address {
+  color: #A0A0A0;
 }
 
 .maintenance {
@@ -513,7 +515,9 @@ body {
 
 // medium +
 @media (min-width: 768px) {
-  
+  .address-container {
+    padding: 15px 5px 0px 0px;
+  }
   //.container {
 //    width: 100%;
 //  }
