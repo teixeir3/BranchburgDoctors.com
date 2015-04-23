@@ -16,7 +16,7 @@
 
 class Observance < ActiveRecord::Base
   
-  validates :start_date, :name, :link, :user, presence: true
+  validates :start_date, :name, :link, presence: true
   
  
   
