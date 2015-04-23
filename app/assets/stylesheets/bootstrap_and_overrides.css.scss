@@ -256,6 +256,10 @@ $text-shadow: black;
   top: -123px;
 }
 
+.resource {
+  min-height: 250px;
+}
+
 .service {
   color: $servicesTextColor;
   background: $brand-primary-transparent;
