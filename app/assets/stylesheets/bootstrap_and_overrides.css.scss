@@ -192,6 +192,15 @@ $text-shadow: black;
   }
 }
 
+// Icons
+
+.fa {
+  transition: all 1s;
+}
+a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
+  opacity: .8;
+}
+
 .black-icon {
   color: black;
 }
@@ -222,6 +231,7 @@ $text-shadow: black;
   text-decoration: none !important;
   color: #fff;
   opacity: 0;
+  transition: all 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
@@ -328,6 +338,18 @@ $text-shadow: black;
     }
   }
 }
+
+.male-col {
+  background-color: $brand-primary-transparent;
+}
+
+.female-col {
+  background-color: rgba(220, 167, 167, 0.5);
+}
+
+.male-female-col {
+  background-color: rgba(62, 143, 62, 0.5);
+}
 .download:before { background: $downloadsBackground; }
 .patient-portal {
   .jumbotron {
@@ -341,9 +363,14 @@ $text-shadow: black;
     font-size: 20px;
   }
 }
+
+.list-group {
+  border: none;
+  box-shadow: none;
+}
 .list-group-item {
   background: inherit;
-  border: inherit;
+  border: none;
 }
 
 .blurb {  

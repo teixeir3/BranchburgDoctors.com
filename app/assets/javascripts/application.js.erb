@@ -283,6 +283,10 @@ $(document).on('page:change', function() {
    $($(event.target).data("anchor")).animatescroll({padding:71});  
   });
   
+  $(".fa").on("click", function(event) {
+    $(event.target).toggleClass("fa-lg");
+  });
+  
   $('.deletable').bind('ajax:success', rowFadeout);
   
   $('.login').on("click", window.modal.show);
