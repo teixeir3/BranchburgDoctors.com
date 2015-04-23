@@ -1,27 +1,71 @@
-<div class="row">
+<div class="row font-md">
   <div class="col-md-12">
-    <h1>Referral Policy:</h1>
+    <div class="page-header"><h1>Referral Policy:</h1></div>
   </div>
   
-  <div class="col-md-12">
-    <p>
-      If you need a referral and have not been seen at the office, you need to schedule an appointment prior to being seen by the specialist.
-    </p>
-    <p>
-      We cannot backdate referrals for any reason - it is against Insurance Policy.
-  You need to be aware of how many visits you have on your referral and when they expire.
-  We require 48 hours notice if a new referral is needed in order to provide the best care possible.
-  Inquire with the practice if the specialist can get a referral via NAVINET or their internet provider.
-  Do to new HIPAA laws, we are no longer able to fax referrals - it is your responsibility to make sure all the paperwork is done in a timely manner. You will be asked to pick up your referral if your specialist cannot access it via the internet.
-    </p>
-    <p>
+  <div class="col-min-height col-xs-12 col-sm-6 alert alert-danger">
+    <ul class="list-group text-center">
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+         If you need a referral and have not been seen at the office, you need to schedule an appointment prior to being seen by the specialist.
+      </li>
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+        We cannot backdate referrals for any reason - it is against Insurance Policy.
+      </li>
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+        You need to be aware of how many visits you have on your referral and when they expire.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-min-height col-xs-12 col-sm-6 alert alert-danger">
+    <ul class="list-group text-center">
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+        Inquire with the practice if the specialist can get a referral via NAVINET or their internet provider.
+      </li>
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+        Do to new HIPAA laws, we are no longer able to fax referrals - it is your responsibility to make sure all the paperwork is done in a timely manner.
+      </li>
+      <li class="list-group-item blurb">
+        <i class="fa fa-exclamation-circle"></i>
+        You will be asked to pick up your referral if your specialist cannot access it via the internet.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-min-height col-xs-12 alert alert-danger">
+    <div class="blurb">
+      <i class="fa fa-exclamation-circle"></i>
       If you go to your appointment without a referral, you may be asked to reschedule your appointment; Make sure you have all your paperwork in order before you go see your specialist.
-  To contact the referral desk at the office - Call the phone number corresponding to your doctor and ask for Joann:
+    </div>
+  </div>
+  
+  
+   
+      
+  
   </p>
   </div>
   
+  <div class="col-xs-12 col-sm-6 text-center">
+    <%= link_to page_path("contact", anchor: "dr-julie-phone") do %>
+      <h2>Contact the referral desk: Joann</h2>
+      <ul class="list-group text-center">
+        <li class="list-group-item blurb">
+          <strong>Dr. Juliano: 908-685-8080</strong>
+        </li>
+        <li class="list-group-item blurb">
+          <strong>Dr. Halper-Erkkila: 908-526-8300</strong>
+        </li>
+      </ul>
+    <% end %>
+  </div>
 
-
-  Dr. Juliano                   908-685-8080
-  Dr. Halper-Erkkila            908-526-8300
+  <div class="col-xs-12 col-sm-6 text-center img-col">
+    <a href="#" title="South Branch Family Practice Desk" class="hovertext"><%= image_tag("OfficePictures/Desk.JPG", alt: "Sick Care") %></a>
+  </div>
 </div>
