@@ -278,7 +278,10 @@ $(document).on('page:change', function() {
   $('[data-toggle="popover"]').popover()
   
   $('.anchored').on("click", function(event) {
-   event.preventDefault(); 
+   if ($(event.target).data("anchored") === true) {
+     event.preventDefault(); 
+   }
+     
    // console.log();
    $($(event.target).data("anchor")).animatescroll({padding:71});  
   });
