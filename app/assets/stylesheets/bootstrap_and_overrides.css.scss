@@ -267,7 +267,9 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
 }
 
 .resource {
-  min-height: 250px;
+  .thumbnail {
+    height: 250px%;
+  }
 }
 
 .service {
