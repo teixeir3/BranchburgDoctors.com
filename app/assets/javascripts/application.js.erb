@@ -18,10 +18,10 @@
 //= require animate-scroll
 //= require fileinput
 
-var setFilepickerKey = function() {
-  filepicker.setKey("<%= ENV['FILEPICKER_KEY'] %>")
-};
-  
+// var setFilepickerKey = function() {
+//   filepicker.setKey("<%= ENV['FILEPICKER_KEY'] %>")
+// };
+//
 
 var updateSortable = function(event, ui) {
       $.post($(this).data('update-url'), $(this).sortable('serialize'));
@@ -260,7 +260,7 @@ $(document).on('page:fetch', function() {
 
 // Bind event listeners for TurboLinks
 $(document).on('page:change', function() {
-  setFilepickerKey();
+  // setFilepickerKey();
   window.spinner.off();
   $(window).scroll(collapseCheck);
   // $(window).scroll(sidebarCheck);
