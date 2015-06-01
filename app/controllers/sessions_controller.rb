@@ -25,7 +25,6 @@ class SessionsController < ApplicationController
     if @user
       sign_in(@user)
       flash[:notice] = ["Welcome #{@user.name}"]
-      # session[:return_url] = request.referrer unless session[:return_url]
       
       redirect_to (session[:return_url].nil?) ? :root : session[:return_url]
     else

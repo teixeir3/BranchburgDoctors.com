@@ -532,6 +532,17 @@ footer .address {
 }
 
 
+.spinner {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  left: 46%;
+  img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 .maintenance {
   text-align: center;
 }
