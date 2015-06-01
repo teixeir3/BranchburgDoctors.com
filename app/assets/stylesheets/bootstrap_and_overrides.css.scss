@@ -379,7 +379,6 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
 .blurb {  
   border-radius: 4px;
   &:hover {
-    background: $brand-primary;
     background: $brand-primary-transparent
 
   }
@@ -606,7 +605,7 @@ footer {
 
 .social-links {
   margin: auto;
-  width: 300px;
+  width: 310px;
   li {
     padding-left: 10px;
     padding-right: 10px;
