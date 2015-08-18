@@ -460,6 +460,47 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
   z-index: 1;
 }
 
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+
+  &:hover {
+    background: transparent !important;
+  }
+
+  .icon-bar {
+    width: 22px;
+    transition: all 0.5s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+    transition: all 0.2s;
+//    transform: rotate(-45deg);
+//    transform-origin: 37%;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggle.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+//    transform: rotate(0);
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
 .collpased > .navbar-nav {
   padding-left: 40px;
 }
