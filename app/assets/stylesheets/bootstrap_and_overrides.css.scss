@@ -504,8 +504,10 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
 }
 
 .inverse-dropdown{
-  background-color: $navbar-inverse-bg;
+  background: $navbar-inverse-bg !important;
+  position: absolute !important;
   border-color: #080808;
+  z-index: 99999;
   & > li > a {
     color: #999;
     &:hover{
