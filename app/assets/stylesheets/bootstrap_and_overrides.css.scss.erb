@@ -1,3 +1,5 @@
+//= depend_on_asset "OfficePictures/Office_front_cropped_2067x1258.png"
+
 // Set the correct sprite paths
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
@@ -17,7 +19,7 @@ $navbarBackground: #555;
 $navbarBackgroundHighlight: #888;
 $navbar-height: 74px;
 
-$navbar-inverse-bg: darken(#222, 15%);
+$navbar-inverse-bg: rgba(12, 26, 32, 0.9);
 $navbar-inverse-color: white;
 $navbar-inverse-link-color: #337ab7;
 
@@ -245,7 +247,7 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
 }
 
 .front-office-bg {
-  background-image: url("OfficePictures/Office_front_cropped_2067x1258.png");
+  background-image: url(<%= asset_path("OfficePictures/Office_front_cropped_2067x1258.png") %>);
 }
 
 .background-image {
@@ -683,10 +685,9 @@ main {
 }
 
 body {
-//  padding-top: 380px; for header fixed-top 
+  position: relative;
   overflow-x: hidden;
   transition:all 1s;
-  
   -webkit-transition:all 1s;
   -moz-transition:all 1s;
   -o-transition:all 1s;
@@ -695,7 +696,6 @@ body {
 #site-slogan {
   min-width: 236px;
 }
-//@import "bootstrap-responsive";
 
 .navbar-brand { 
   height: inherit;
@@ -767,13 +767,9 @@ footer {
   -webkit-transition:all 1s ease-in-out;
 }
 
-//.collapsed { padding-top: 60px; }
-body { 
-  padding-top: 0px;
-}
 .navbar-nav > li > a {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 // Small

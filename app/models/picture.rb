@@ -18,8 +18,8 @@
 
 class Picture < ActiveRecord::Base
   
-  validate :title, presence: true, allow_blank: false
-  validate :image, presence: true
+  validates :title, presence: true, allow_blank: false
+  validates :image, presence: true
   
   belongs_to :imageable, polymorphic: true, inverse_of: :pictures
   

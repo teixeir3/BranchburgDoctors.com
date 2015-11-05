@@ -96,6 +96,14 @@ class User < ActiveRecord::Base
     inverse_of: :user
   )
   
+  has_many(
+    :observances,
+    class_name: "Observance",
+    foreign_key: :user_id,
+    primary_key: :id,
+    inverse_of: :user
+  )
+  
   has_many :bookings, through: :booking_categories, source: :bookings
   
   include Imageable

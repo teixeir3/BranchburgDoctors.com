@@ -12,20 +12,18 @@
 #  position    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  user_id     :integer
 #
 
 class Observance < ActiveRecord::Base
-  
   validates :start_date, :name, :link, presence: true
-  
- 
   
   belongs_to(
     :user,
     class_name: "User",
     foreign_key: :user_id,
     primary_key: :id,
-    inverse_of: :downloads
+    inverse_of: :observances
   )
   
   include Imageable
