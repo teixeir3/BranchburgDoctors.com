@@ -71,6 +71,22 @@ class User < ActiveRecord::Base
    inverse_of: :user
  )
  
+ has_many(
+   :observances,
+   class_name: "Observance",
+   foreign_key: :user_id,
+   primary_key: :id,
+   inverse_of: :user
+ )
+ 
+ has_many(
+   :announcements,
+   class_name: "Announcement",
+   foreign_key: :user_id,
+   primary_key: :id,
+   inverse_of: :user
+ )
+ 
  # TODO Potential
   has_many(
     :promotions,
@@ -91,14 +107,6 @@ class User < ActiveRecord::Base
   has_many(
     :booking_categories,
     class_name: "BookingCategory",
-    foreign_key: :user_id,
-    primary_key: :id,
-    inverse_of: :user
-  )
-  
-  has_many(
-    :observances,
-    class_name: "Observance",
     foreign_key: :user_id,
     primary_key: :id,
     inverse_of: :user

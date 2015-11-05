@@ -11,15 +11,14 @@
 
 
   
-    <% downloads.each do |download| %>
-      <div class="col-md-<%= (downloads.empty?) ? "12" : "#{12/downloads.count}" %>">
-        <ul class="list-group">
-          <li class="list-group-item"><%= download.title %></li>
-          <li class="list-group-item">New Patients Welcome!</li>
-          <li class="list-group-item">Print and fill out your Demographics Info sheet before your visit.</li>
-          <li class="list-group-item">Download New Patient Welcome Packet for more information.</li>
-          <li class="list-group-item">To understand our Referral policy, click here.</li>
-        </ul>
-      </div>
-    <% end %>
-
+<% downloads.each do |download| %>
+  <div class="col-md-<%= (downloads.empty?) ? "12" : "#{12/downloads.count}" %>">
+    <ul class="list-group">
+      <li class="list-group-item"><%= download.title %></li>
+      <li class="list-group-item">New Patients Welcome!</li>
+      <li class="list-group-item">Print and fill out your Demographics Info sheet before your visit.</li>
+      <li class="list-group-item">Download New Patient Welcome Packet for more information.</li>
+      <li class="list-group-item">To understand our Referral policy, click here.</li>
+    </ul>
+  </div>
+<% end %>

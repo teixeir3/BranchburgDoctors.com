@@ -116,22 +116,6 @@ var collapseCheck = function() {
   }
 };
 
-// var transformSidebarCheck = function() {
-//   // console.log("scroll-top: " + $(this).scrollTop());
-//   // console.log("header-height: " + $("header").height());
-//   // console.log("sidebar-height: " + $(".sidebar").height());
-//   // console.log("difference: " + ($(".sidebar").height() - $("header").height()));
-//   // console.log("\n")
-//
-//   if (checkSize()) {
-//     if (scrollCheck($("header").height())) {
-//       addClasses({".row": "sidebar-hidden"});
-//     } else {
-//      removeClasses({".row": "sidebar-hidden"});
-//     }
-//   }
-//
-// };
 
 var sidebarCheck = function() {
   console.log(checkSize());
@@ -144,14 +128,6 @@ var sidebarCheck = function() {
   }
  
 };
-
-// var transformMainContentCheck = function() {
-//   if (scrollCheck(($("header").height()+2))) {
-//     addClasses({".row": "main-content-full"});
-//   } else {
-//    removeClasses({".row": "main-content-full"});
-//   }
-// };
 
 var addClasses = function(classHash) {
   for (var key in classHash) {
@@ -166,10 +142,6 @@ var removeClasses = function(classHash) {
 };
 // toggleHash is a hash matching pattern [{ "elem": "addClassName"}, { "elem": "removeClassName"}]
 var scrollCheck = function(breakPoint) {
-  // TODO: Remove 
-  // console.log("scrollTop(): " + $(this).scrollTop());
-  // console.log("breakPoint: " + breakPoint);
-
   if ($(this).scrollTop() >= breakPoint) {
     return true;
   } else {
@@ -264,8 +236,6 @@ $(document).on('page:change', function() {
   window.spinner.off();
   $(window).scroll(collapseCheck);
   // $(window).scroll(sidebarCheck);
-//   $(window).resize(sidebarCheck);
-
   
   fadeOutElement($('.errors'), 6000);
   fadeOutElement($('.notices'), 6000);
@@ -278,12 +248,13 @@ $(document).on('page:change', function() {
   $('[data-toggle="popover"]').popover()
   
   $('.anchored').on("click", function(event) {
-   if ($(event.target).data("anchored") === true) {
-     event.preventDefault(); 
-   }
+    var $el = $($(event.target).data("anchor"));
      
-   // console.log();
-   $($(event.target).data("anchor")).animatescroll({padding:71});  
+    if ($el.length > 0) {
+      event.preventDefault(); 
+      $el.animatescroll({});
+    }
+
   });
   
   $(".fa").on("click", function(event) {

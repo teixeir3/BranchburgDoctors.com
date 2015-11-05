@@ -10,26 +10,8 @@
   </div>
 </div>
 
-<div class="row text-center announcements">
-  <%= render "announcements/current_month" %>
-</div>
-
 <div class="row row-padding text-center announcement background-image tint">
-  <div class="col-xs-12">
-    <h3>Flu Vaccine: <small>When should I get Vaccinated?</small></h3>
-    <h4>Available Now <strong>Sept 2015</strong>:</h4>
-  </div>
-  
-  <div class="announcement-body col-xs-12 col-sm-6">
-    <p>We reccomend flu vaccination as soon as it's available in <strong>October</strong>. As long as flu viruses are circulating, vaccination will continue to be offered throughout January or later.  While seasonal influenza outbreaks can happen as  early as October, most of the time influenza activity peaks in January or later.  Since it takes about two weeks after vaccination for antibodies to develop in the body that protect against influenza virus infection, it is best to get vaccinated early to be protected before influenza begins spreading in your community.</p>
-
-    <p>Protect yourself, your family, and your patients by getting a flu shot this season!</p>
-  </div>
-  <%= link_to page_path("vaccinations"), class: "hidden-xs col-sm-6 thumbnail service-link" do %>
-    <%= image_tag "icons/vaccines_600x600.png", height: 200, width: 200 %>
-
-    <h3 class="text-center">Vaccinations</h3>
-  <% end %>
+  <%= render partial: "announcements/index", locals: {announcements: @announcements} %>
 </div>
 
 
@@ -41,7 +23,7 @@
 
 <div class="row row-padding downloads tint">
   <div class="col-md-12">
-    <%= render "pages/resources", downloads: @downloads %>
+    <%= render partial: "pages/resources", locals: {downloads: @downloads} %>
   </div>
 </div>
 
@@ -57,11 +39,5 @@
 
 <div class="row row-padding observances tint background-image">
   <div class="background-blur"></div>
-  <%= render "observances/current_month", observances: @observances %>
+  <%= render partial: "observances/current_month", locals: {observances: @observances} %>
 </div>
-
-
-
-
-
-
