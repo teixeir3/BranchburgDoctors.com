@@ -46,6 +46,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    flash[:notice] = ["User logged out."]
     sign_out!
     redirect_to request.referrer
   end

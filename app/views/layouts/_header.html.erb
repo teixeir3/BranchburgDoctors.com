@@ -80,16 +80,10 @@
 <% flash.each do |name, msgArr| %>
   <% if (msgArr.class == Array) %>
     <% msgArr.each do |msg| %>
-      <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
-        <a class="close" data-dismiss="alert">×</a>
-        <%= msg %>
-      </div>
+         <%= render partial: "layouts/flash_message", locals: {name: name, msg: msg} %>
     <% end %>
   <% else %>
-  <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
-    <a class="close" data-dismiss="alert">×</a>
-    <%= msgArr %>
-  </div>
+   <%= render partial: "layouts/flash_message", locals: {name: name, msg: msgArr} %>
   <% end %>
 <% end %>
 </header>

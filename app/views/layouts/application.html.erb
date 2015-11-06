@@ -29,8 +29,8 @@
   
   <!-- Begin Notification Area. *********************************************** -->
   
-    <%= render "layouts/messages", messages_arr: flash[:notices], class_name: "notices" if flash[:notices] %>
-    <%= render "layouts/messages", messages_arr: flash[:errors], class_name: "errors" if flash[:errors] %>
+    <% render "layouts/messages", messages_arr: flash[:notices], class_name: "notices" if flash[:notices] %>
+    <% render "layouts/messages", messages_arr: flash[:errors], class_name: "errors" if flash[:errors] %>
    
   <!-- End Notification Area. ************************************************* -->
   
