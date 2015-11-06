@@ -535,6 +535,7 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
   }
   #middle-bar{
     background-color: rgba(0,0,0,0.0);
+    -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
   }
   .icon-bar {
     -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
@@ -548,6 +549,9 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
       margin-top: 0;
       -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
       -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+      -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+      -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+      -webkit-transition-delay: 0.0s, 0.2s; transition-delay: 0.0s, 0.2s;
     }
     &:before {
       -webkit-transform: rotate(45deg); transform: rotate(45deg);
@@ -564,7 +568,7 @@ a:hover > .fa, h1:hover > .fa, h2:hover > .fa, h3:hover > .fa, h4:hover > .fa {
       -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
     }
     #middle-bar{
-    background-color: $navbar-inverse-toggle-icon-bar-bg;
+      background-color: $navbar-inverse-toggle-icon-bar-bg;
     }
     .icon-bar, .icon-bar:before, .icon-bar:after {
       -webkit-transform: rotate(0deg); transform: rotate(0deg);
