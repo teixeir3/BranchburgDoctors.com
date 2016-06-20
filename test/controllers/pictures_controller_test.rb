@@ -18,7 +18,7 @@ class PicturesControllerTest < ActionController::TestCase
 
   test "should create picture" do
     assert_difference('Picture.count') do
-      post :create, picture: {  }
+      post :create, picture: { title: "test-picture-title" }
     end
 
     assert_redirected_to picture_path(assigns(:picture))

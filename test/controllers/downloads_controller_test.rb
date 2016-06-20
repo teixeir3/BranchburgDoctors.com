@@ -18,7 +18,7 @@ class DownloadsControllerTest < ActionController::TestCase
 
   test "should create download" do
     assert_difference('Download.count') do
-      post :create, download: {  }
+      post :create, download: { title: "test-download" }
     end
 
     assert_redirected_to download_path(assigns(:download))
